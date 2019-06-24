@@ -8,9 +8,9 @@ permalink: /about/
 I am a Phd Candidate at USC's Sol Price School of Public Policy under Professor Richard Green. My dissertation work focuses on the industrial organization of the rental housing market with an emphasis on the pricing of rents, landlord market power, market segmentation, and relationships between the ownership and rental markets. Additionally, I research questions surrounding residential mobility, neighborhood composition, and shocks thereto. 
 
 
-My background is in Economics and Statistics from UC Berkeley (BA,BS) and Duke University (MA). My work mostly consists of data science in unearthing and documenting social phenomena - or the facilitation thereof. 
+My background is in Economics and Statistics from UC Berkeley (BA,BS) and Duke University (MA) but my work spans almost all branches of data science. Beside the perpetual drip supply of Turkish coffee, my motivation stems from my love for unearthing and documenting social phenomena. For a reference on what this combination of drugs and joy can accomplish, check out my [Resume](./Resume _Gene Burinskiy.pdf). 
 
-[Resume](/Resume_Gene_Burinskiy.pdf)
+
 
 # Interests
 I indulge in frolicking on mountain sides above daily fees below shady trees. I don't do adrenaline junking but do flirt with the occasional bonking. Triathlons and cycle racing are recent additions to my outdoorsy expeditions. Bagels are my staple - I'm not much into maple. Silly rhymes I have more than dimes and during salad times I prefer lemons over limes.
