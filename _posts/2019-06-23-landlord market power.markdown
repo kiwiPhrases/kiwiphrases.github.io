@@ -5,10 +5,6 @@ date:   2019-06-23 5:55:00 -0700
 categories: research
 ---
 
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-
 # Intro
 
 In *Evicted*, Desmond mentions that some landlords have rather large rental unit holdings which made me wonder how competitive are rental markets? We often assume competitive markets (ie lots of buyers and sellers) which is likely true at the MSA level and for households who have access to tools that expose them to the entire market (ie Zillow, Hotpads). What about households who either don't have access or don't use such tools and instead find housing through social networks or other means that geographically constrain or obsurce their options? If a few landlords own a large portion of the area in which such households shop then these households may be shopping in an oligopolistic market. 
@@ -18,7 +14,7 @@ To start exploring this question, I lean on the Milwaukee Master Property Record
 
 # Method 
 
-One way to measure market concentration is the Herfindalh-Hirschmann Index (HHI) \( HHI_g = \sum_{i=1}^{N} s^2_{ig} \) where i is a firm, N is the total number of firms, g indexes geographic levels, and \(s_i \) is firm i's market share. I compute HHIs at the city, Census tract, block group, and block levels. An HHI index of 0 suggests a perfectly competitive market while an index of 1 suggests and perfectly monopolistic market. Usually, HHIs over .2 are considered cause for concern. To get market share \(s_{ig} \), I find the number of units owned at level g by each owner i and divide by the total number of units in area g. 
+One way to measure market concentration is the [Herfindalh-Hirschmann Index](https://en.wikipedia.org/wiki/Herfindahl%E2%80%93Hirschman_Index) I compute HHIs at the city, Census tract, block group, and block levels. An HHI index of 0 suggests a perfectly competitive market while an index of 1 suggests and perfectly monopolistic market. Usually, HHIs over .2 are considered cause for concern. To get market share, I find the number of units owned in each area by each owner and divide by the total number of units in area that area. 
 
 
 Note that I do not yet have a reliable way of discerning which units are owned and which are rented which means that if we are examining the rental market, then the HHIs I compute are bias toward 0 except in areas where there are only rental units. As a result, it is possible to assume that the HHIs faced by renters are somewhat higher than the estimates I provide. 
