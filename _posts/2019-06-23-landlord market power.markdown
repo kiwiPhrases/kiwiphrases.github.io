@@ -26,7 +26,7 @@ The HHIs that I compute do not apply to the entire rental market equally. Househ
 
 After some extensive cleaning, the **HHI for the City of Milwaukee** turns out to be   0.005 or virtually zero and hence nearly perfectly competitive. However, this assumes that the market is the entire city. If we restrict markets to be Census tracts of 213 with over 10 residential units, 3 have HHIs over .2. Repeating the exercise for Block Groups, of 574 block groups with at more than 10 units and 1 property, 20 have concentrations over .2. At the Census Block level, of 5461 blocks, a whopping 580 of them have HHIs over .2 with 30 blocks having concentrations near 1. 
 
-<p align="center"><img src="/MilwaukeeHHI.PNG" alt="map" align="center" width="600"/></p>
+<p align="center"><img src="./MilwaukeeHHI.PNG" alt="map" align="center" width="600"/></p>
 
 I leverage the Census Tiger files to map the HHI indexes at the Census block level for blocks with more than 2 units, 2 properties, and 10 residents. As we can see, most of Milwaukee is green suggesting that block-level HHIs fall into the .005-.01 levels(these tracts are likely to be predominantly owner-occupied units). However, toward the center and downtown parts of Milwaukee, we see a much higher concentration of blocks with HHIs over .2. 
 
