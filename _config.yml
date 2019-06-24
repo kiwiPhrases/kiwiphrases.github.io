@@ -18,7 +18,7 @@ subtitle: Data and life's miseries coexisting in a joyful blog
 email: burinski@usc.edu
 description: >- # this means to ignore newlines until "baseurl:"
   Some say I am a PhD student at Price School of Public Policy at USC and they would be correct. Upon these blog fields reside snippets of my research, and (potentially) useful code dealing with data science's more back-breaking elements in sought of greener pastures and a brighter future. Roam with curiosity and feel free to leave feedback. 
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/kiwiphrases.github.io" # the subpath of your site, e.g. /blog
 url: https://kiwiphrases.github.io/ # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  kiwiphrases
 stackoverflow_username: 1978817
