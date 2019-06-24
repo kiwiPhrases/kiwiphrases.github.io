@@ -14,7 +14,7 @@ To start exploring this question, I lean on the Milwaukee Master Property Record
 
 # Method 
 
-One way to measure market concentration is the Herfindalh-Hirschmann Index (HHI) $$HHI_g = \sum_{i=1}^{N} s^2_{ig}$$ where $i$ is a firm, $N$ is the total number of firms, $g$ indexes geographic levels, and S$s_i$ is firm i's market share. I compute HHIs at the city, Census tract, block group, and block levels. An HHI index of 0 suggests a perfectly competitive market while an index of 1 suggests and perfectly monopolistic market. Usually, HHIs over .2 are considered cause for concern. To get market share $$s_{ig}$$, I find the number of units owned at level g by each owner i and divide by the total number of units in area g. 
+One way to measure market concentration is the Herfindalh-Hirschmann Index (HHI) \(HHI_g = \sum_{i=1}^{N} s^2_{ig}\) where i is a firm, N is the total number of firms, g indexes geographic levels, and \(s_i\) is firm i's market share. I compute HHIs at the city, Census tract, block group, and block levels. An HHI index of 0 suggests a perfectly competitive market while an index of 1 suggests and perfectly monopolistic market. Usually, HHIs over .2 are considered cause for concern. To get market share \(s_{ig}\), I find the number of units owned at level g by each owner i and divide by the total number of units in area g. 
 
 
 Note that I do not yet have a reliable way of discerning which units are owned and which are rented which means that if we are examining the rental market, then the HHIs I compute are bias toward 0 except in areas where there are only rental units. As a result, it is possible to assume that the HHIs faced by renters are somewhat higher than the estimates I provide. 
