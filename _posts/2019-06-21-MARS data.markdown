@@ -1,0 +1,178 @@
+---
+layout: post
+title:  "MARS data and housing search technology"
+date:   2019-06-21 5:55:00 -0700
+categories: research
+---
+
+# Intro
+
+What technology do you usually employ when you search for a place to rent? If you're reading this then chances are you'll name Craigslist, Zillow, Hotpads, or a myriad of other similar online search tools. What does this imply? At your fingertips, you have a plethora of options to choose from which makes it easier for you to find the mix of quality, neighborhood, and rent that suit your preferences and constraints. Perhaps more importantly, online browsing exposes you to a glimpse of the whole rental market; thus, providing you with at least a vague idea of what and where you can get in particular price ranges. 
+
+
+Does everyone search for housing in that manner? What are the consequences of alternative search technologies?  Palm and Danis (2013) find that in 2000, households
+%earning over \$100,000 employed the Internet in much greater share to find homes and visited 20 or more homes while households earning below \$50,000 did not use the Internet and visited 4-6 homes during their search. Desmond (2016) similarly documents the observation that low income households rely primarily on family, friends, prior landlords, and print media to find housing. These, of course, are not the only sources documenting that low income households don't necessarily search in the same way as higher income households. However, representative and large data on search technology employed in housing search is scant. Perhaps somewhat redundantly, I will show some brief statistics from the Milwaukee Area Renters Survey ([MARS](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/BLUU3U)) that Desmond initiated and uses in his studies. 
+
+# Search tech and income
+What is interesting about the MARS survey is it asks how the respondents found their current place. I tabulated the results by search method below. Almost a half of the respondents found their place through a friend or family and almost a fifth through a sign. What's interesting is that only 8% of respondents found their place through the internet. 
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>num of respondents</th>
+      <th>share of respondents</th>
+    </tr>
+    <tr>
+      <th>Found via</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Friend</th>
+      <td>306.0</td>
+      <td>0.24</td>
+    </tr>
+    <tr>
+      <th>Family</th>
+      <td>300.0</td>
+      <td>0.23</td>
+    </tr>
+    <tr>
+      <th>Sign</th>
+      <td>231.0</td>
+      <td>0.18</td>
+    </tr>
+    <tr>
+      <th>PrintMedia</th>
+      <td>159.0</td>
+      <td>0.12</td>
+    </tr>
+    <tr>
+      <th>Other</th>
+      <td>130.0</td>
+      <td>0.10</td>
+    </tr>
+    <tr>
+      <th>Internet</th>
+      <td>103.0</td>
+      <td>0.08</td>
+    </tr>
+    <tr>
+      <th>Agency</th>
+      <td>45.0</td>
+      <td>0.03</td>
+    </tr>
+    <tr>
+      <th>HA</th>
+      <td>25.0</td>
+      <td>0.02</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+Does choice of search technology vary by income? For a perspective, I cut monthly incomes into quartiles and tabulate them against technology. What's interesting is that the share of households that find their housing through family or friends (59-70%) is quite high across all incomes though the shares decrease for higher income households. Perhaps I shouldn't be surprised since of my past 4 residences, 2 were found through friends but I deviate. The other interesting, and arguably most noticeable, stat is that the share of households who found their dwelling via the internet drastically increases from 6% in the lowest quartile to 20% in the highest. This is suggestive of my argument in the Renter vs quality post in which I argue that because higher income households search online, they may have a better conception of the local rent-to-quality schedule. 
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>totalincome</th>
+      <th>[0, 720]</th>
+      <th>(720, 1200]</th>
+      <th>(1200, 1840]</th>
+      <th>(1840, 6000]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>foundThruFamily</th>
+      <td>0.37</td>
+      <td>0.30</td>
+      <td>0.28</td>
+      <td>0.27</td>
+    </tr>
+    <tr>
+      <th>foundThruFriend</th>
+      <td>0.31</td>
+      <td>0.39</td>
+      <td>0.32</td>
+      <td>0.31</td>
+    </tr>
+    <tr>
+      <th>foundThruInternet</th>
+      <td>0.06</td>
+      <td>0.09</td>
+      <td>0.11</td>
+      <td>0.20</td>
+    </tr>
+    <tr>
+      <th>foundThruSign</th>
+      <td>0.26</td>
+      <td>0.22</td>
+      <td>0.29</td>
+      <td>0.22</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+Although the pattern is pretty clearly visible from the above table, I fit a logit with ito an indicator for places found online against log income. To little surprise, the coefficient on log income is positive and statistically significant. 
+
+<table class="simpletable">
+<caption>Logit Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th> <td>foundThruInternet</td> <th>  No. Observations:  </th>  <td>   938</td>  
+</tr>
+<tr>
+  <th>Model:</th>               <td>Logit</td>       <th>  Df Residuals:      </th>  <td>   936</td>  
+</tr>
+<tr>
+  <th>Method:</th>               <td>MLE</td>        <th>  Df Model:          </th>  <td>     1</td>  
+</tr>
+<tr>
+  <th>Date:</th>          <td>Thu, 01 Nov 2018</td>  <th>  Pseudo R-squ.:     </th>  <td>0.02483</td> 
+</tr>
+<tr>
+  <th>Time:</th>              <td>19:31:09</td>      <th>  Log-Likelihood:    </th> <td> -302.04</td> 
+</tr>
+<tr>
+  <th>converged:</th>           <td>True</td>        <th>  LL-Null:           </th> <td> -309.73</td> 
+</tr>
+<tr>
+  <th> </th>                      <td> </td>         <th>  LLR p-value:       </th> <td>8.797e-05</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+      <td></td>         <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th> <th>[95.0% Conf. Int.]</th> 
+</tr>
+<tr>
+  <th>const</th>     <td>   -4.4744</td> <td>    0.810</td> <td>   -5.526</td> <td> 0.000</td> <td>   -6.061    -2.887</td>
+</tr>
+<tr>
+  <th>logincome</th> <td>    0.3328</td> <td>    0.112</td> <td>    2.969</td> <td> 0.003</td> <td>    0.113     0.552</td>
+</tr>
+</table>
+
+# Discussion
+From the MARS survey and responses on how current units have been found, we see that there is a tendency for higher income households to use online resources to find their residences. This would suggest that at least from a whollistic perspective, more affluent households would have a greater exposure to the set of housing options than lower income households. However, note that this is all mere conjectures. For example, the relationship could suffer from selection issues whereby recent movers use online resources while long-time residents use established social connections. However, perhaps it doesn't matter much if the goal is to argue that low-income households may have a more limited knowledge of the rental market due to their choice of search technology. 
+
+There are a few things worth of noting. The median income and rents of \$32,000 and \$715 in the AHS 2015 survey for Milwaukee are somewhat higher than the \$14,400 and \$600 in the MARS survey. This may suggest that MARS oversampled or targeted households occupying a lower portion of the income distribution than the AHS. 
