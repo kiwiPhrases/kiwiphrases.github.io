@@ -7,10 +7,13 @@ categories: research
 
 # Intro
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 In *Evicted*, Desmond mentions that some landlords have rather large rental unit holdings which made me wonder: how competitive are rental markets? We often assume competitive markets (ie lots of buyers and sellers) and this assumption probably holds at the MSA level and for households who have access to tools(ie Zillow, Hotpads) that expose them to the entire market. What about households who either don't have access or don't use such tools and instead find housing through social networks or other means that geographically constrain or obsurce their options? If a few landlords own a large portion of the area in which such households shop then these households may be shopping in an oligopolistic market. 
 =======
 $$HHI = \sum_i^N$$
+=======
+>>>>>>> 67cc1f17415eed5a221e669869739afaa61eef8d
 In *Evicted*, Desmond mentions that some landlords have rather large rental unit holdings which made me wonder how competitive are rental markets? We often assume competitive markets (ie lots of buyers and sellers) which is likely true at the MSA level and for households who have access to tools that expose them to the entire market (ie Zillow, Hotpads). What about households who either don't have access or don't use such tools and instead find housing through social networks or other means that geographically constrain or obsurce their options? If a few landlords own a large portion of the area in which such households shop then these households may be shopping in an oligopolistic market. 
 >>>>>>> a15b69492082c796a97f79373b054aa6a1b3eb62
 
