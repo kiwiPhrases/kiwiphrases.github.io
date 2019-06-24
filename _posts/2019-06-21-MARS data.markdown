@@ -11,7 +11,7 @@ What technology do you usually employ when you search for a place to rent? If yo
 
 
 Does everyone search for housing in that manner? What are the consequences of alternative search technologies?  Palm and Danis (2013) find that in 2000, households
-%earning over \$100,000 employed the Internet in much greater share to find homes and visited 20 or more homes while households earning below \$50,000 did not use the Internet and visited 4-6 homes during their search. Desmond (2016) similarly documents the observation that low income households rely primarily on family, friends, prior landlords, and print media to find housing. These, of course, are not the only sources documenting that low income households don't necessarily search in the same way as higher income households. However, representative and large data on search technology employed in housing search is scant. Perhaps somewhat redundantly, I will show some brief statistics from the Milwaukee Area Renters Survey ([MARS](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/BLUU3U)) that Desmond initiated and uses in his studies. 
+earning over \$100,000 employed the Internet in much greater share to find homes and visited 20 or more homes while households earning below \$50,000 did not use the Internet and visited 4-6 homes during their search. Desmond (2016) similarly documents the observation that low income households rely primarily on family, friends, prior landlords, and print media to find housing. These, of course, are not the only sources documenting that low income households don't necessarily search in the same way as higher income households. However, representative and large data on search technology employed in housing search is scant. Perhaps somewhat redundantly, I will show some brief statistics from the Milwaukee Area Renters Survey ([MARS](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/BLUU3U)) that Desmond initiated and uses in his studies. 
 
 # Search tech and income
 What is interesting about the MARS survey is it asks how the respondents found their current place. I tabulated the results by search method below. Almost a half of the respondents found their place through a friend or family and almost a fifth through a sign. What's interesting is that only 8% of respondents found their place through the internet. 
@@ -88,7 +88,7 @@ What is interesting about the MARS survey is it asks how the respondents found t
 </table>
 </div>
 
-Does choice of search technology vary by income? For a perspective, I cut monthly incomes into quartiles and tabulate them against technology. What's interesting is that the share of households that find their housing through family or friends (59-70%) is quite high across all incomes though the shares decrease for higher income households. Perhaps I shouldn't be surprised since of my past 4 residences, 2 were found through friends but I deviate. The other interesting, and arguably most noticeable, stat is that the share of households who found their dwelling via the internet drastically increases from 6% in the lowest quartile to 20% in the highest. This is suggestive of my argument in the Renter vs quality post in which I argue that because higher income households search online, they may have a better conception of the local rent-to-quality schedule. 
+Does choice of search technology vary by income? For a perspective, I cut monthly incomes into quartiles and tabulate them against technology. What's interesting is that the share of households that find their housing through family or friends (59-70%) is quite high across all incomes though the shares decrease with income. Perhaps, I shouldn't be surprised since of my past 4 residences, 2 were found through friends but I deviate. The other interesting, and arguably most noticeable, stat is that the share of households who found their dwelling via the internet drastically increases from 6% in the lowest quartile to 20% in the highest. This is suggestive of my argument in the renter vs quality post in which I argue that because higher income households search online, they may have a better conception of the local rent-to-quality schedule. 
 
 <div>
 <table border="1" class="dataframe">
@@ -134,7 +134,7 @@ Does choice of search technology vary by income? For a perspective, I cut monthl
 </table>
 </div>
 
-Although the pattern is pretty clearly visible from the above table, I fit a logit with ito an indicator for places found online against log income. To little surprise, the coefficient on log income is positive and statistically significant. 
+Although the pattern is pretty clearly visible from the above table, I fit a logit on an indicator for places found online against log income. To little surprise, the coefficient on log income is positive and statistically significant. 
 
 <table class="simpletable">
 <caption>Logit Regression Results</caption>
@@ -173,6 +173,6 @@ Although the pattern is pretty clearly visible from the above table, I fit a log
 </table>
 
 # Discussion
-From the MARS survey and responses on how current units have been found, we see that there is a tendency for higher income households to use online resources to find their residences. This would suggest that at least from a whollistic perspective, more affluent households would have a greater exposure to the set of housing options than lower income households. However, note that this is all mere conjectures. For example, the relationship could suffer from selection issues whereby recent movers use online resources while long-time residents use established social connections. However, perhaps it doesn't matter much if the goal is to argue that low-income households may have a more limited knowledge of the rental market due to their choice of search technology. 
+From the MARS survey and responses on how current units have been found, we see that there is a tendency for higher income households to use online resources to find their residences. In my interpretation, this would suggest that more affluent households would have greater exposure to the available set of housing options than lower income households. This relationship could suffer from selection issues whereby recent movers use online resources while long-time residents use established social connections. However, perhaps it doesn't matter much if the goal is to argue that low-income households may have a more limited knowledge of the rental market due to their choice of search technology. 
 
 There are a few things worth of noting. The median income and rents of \$32,000 and \$715 in the AHS 2015 survey for Milwaukee are somewhat higher than the \$14,400 and \$600 in the MARS survey. This may suggest that MARS oversampled or targeted households occupying a lower portion of the income distribution than the AHS. 
