@@ -23,5 +23,5 @@ In order of update frequency:
 - [GitHub](https://github.com/kiwiphrases)
 - [LinkedIn](https://www.linkedin.com/in/gene-burinsky-29820527/)
 
-<tr><img src="/gb.png" alt="profile" align="left" width="200"/></tr>
+<tr><img src="{{ site.baseurl }}/gb.png" alt="profile" align="left" width="200"/></tr>
 
