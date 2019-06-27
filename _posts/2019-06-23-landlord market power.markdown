@@ -31,57 +31,81 @@ After some extensive cleaning, the **HHI for the City of Milwaukee** turns out t
 I leverage the Census Tiger files to map the HHI indexes at the Census block level for blocks with more than 2 units, 2 properties, and 10 residents. As we can see, most of Milwaukee is green suggesting that block-level HHIs fall into the .005-.01 levels(these tracts are likely to be predominantly owner-occupied units). However, toward the center and downtown parts of Milwaukee, we see a much higher concentration of blocks with HHIs over .2. 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>medianRent</th>
-      <th>medianLogValue</th>
-      <th>propBlack</th>
-      <th>propCheap</th>
-      <th>propOver65</th>
-      <th>propRent</th>
-      <th>propVacant</th>
-      <th>unitsPerPerson</th>
+      <th>fitcoef</th>
+      <th>R^2 adj</th>
+      <th>nObs</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>fitcoef</th>
-      <td>-0.0001 (0.000)</td>
-      <td>0.0086 (0.151)</td>
-      <td>0.0049 (0.585)</td>
-      <td>0.1700 (0.000)</td>
-      <td>0.0235 (0.634)</td>
-      <td>0.1426 (0.000)</td>
-      <td>-0.0150 (0.667)</td>
-      <td>0.0089 (0.015)</td>
-    </tr>
-    <tr>
-      <th>R^2 adj</th>
-      <td>0.0220908</td>
-      <td>0.00201482</td>
-      <td>-0.00123205</td>
-      <td>0.101308</td>
-      <td>-0.00135712</td>
-      <td>0.160966</td>
-      <td>-0.00143138</td>
-      <td>0.00863968</td>
-    </tr>
-    <tr>
-      <th>nObs</th>
-      <td>554</td>
+      <th>log median home value</th>
+      <td>0.0090 (0.151)</td>
+      <td>0.002</td>
       <td>532</td>
+    </tr>
+    <tr>
+      <th>proportion cheap</th>
+      <td>0.1700 (0.000)</td>
+      <td>0.101</td>
       <td>571</td>
+    </tr>
+    <tr>
+      <th>proportion black</th>
+      <td>0.0050 (0.585)</td>
+      <td>-0.001</td>
       <td>571</td>
+    </tr>
+    <tr>
+      <th>proportion rent</th>
+      <td>0.1430 (0.000)</td>
+      <td>0.161</td>
       <td>571</td>
+    </tr>
+    <tr>
+      <th>proportion vacant</th>
+      <td>-0.0150 (0.667)</td>
+      <td>-0.001</td>
       <td>571</td>
+    </tr>
+    <tr>
+      <th>median gross rent</th>
+      <td>-0.0000 (0.000)</td>
+      <td>0.022</td>
+      <td>554</td>
+    </tr>
+    <tr>
+      <th>proportion over age 65</th>
+      <td>0.0230 (0.634)</td>
+      <td>-0.001</td>
       <td>571</td>
+    </tr>
+    <tr>
+      <th>units per person</th>
+      <td>0.0090 (0.015)</td>
+      <td>0.009</td>
       <td>571</td>
     </tr>
   </tbody>
 </table>
 </div>
+
 
 
 To examine demographic patterns, I merge my block group level HHIs with ACS block group level data for Milwaukee County and find that block groups that have a higher share of units costing $10,000-$15,000, higher concentrations of renters, and more people per housing unit also tend to have higher HHIs. Proportion of cheap properties and higher renter shares have the largest coefficient magnitudes. These figures suggest, though indirectly, that low-income areas with high renter shares are more likely to coincide with areas that have higher market concentrations. 
