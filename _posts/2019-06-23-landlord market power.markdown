@@ -35,8 +35,8 @@ I leverage the Census Tiger files to map the HHI indexes at the Census block lev
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>medianGrossRent</th>
-      <th>np.log(median_value)</th>
+      <th>medianRent</th>
+      <th>medianLogValue</th>
       <th>propBlack</th>
       <th>propCheap</th>
       <th>propOver65</th>
