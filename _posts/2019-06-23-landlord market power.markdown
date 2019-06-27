@@ -48,7 +48,7 @@ I leverage the Census Tiger files to map the HHI indexes at the Census block lev
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>fitcoef<sup>[1](#myfootnote1)</sup></th>
+      <th>fitcoef</th>
       <th>R^2 adj</th>
       <th>nObs</th>
     </tr>
@@ -108,7 +108,7 @@ I leverage the Census Tiger files to map the HHI indexes at the Census block lev
 
 
 
-To examine demographic patterns, I merge my block group level HHIs with ACS block group level data for Milwaukee County and find that block groups that have a higher share of units costing $10,000-$15,000, higher concentrations of renters, and more people per housing unit also tend to have higher HHIs. Proportion of cheap properties and higher renter shares have the largest coefficient magnitudes. These figures suggest, though indirectly, that low-income areas with high renter shares are more likely to coincide with areas that have higher market concentrations. 
+To examine demographic patterns, I merge my block group level HHIs with ACS block group level data for Milwaukee County and regress the ACS data on HHIs<sup>[1](#myfootnote1)</sup>. and find that block groups that have a higher share of units costing $10,000-$15,000, higher concentrations of renters, and more people per housing unit also tend to have higher HHIs. Proportion of cheap properties and higher renter shares have the largest coefficient magnitudes. These figures suggest, though indirectly, that low-income areas with high renter shares are more likely to coincide with areas that have higher market concentrations. 
 
 
 
