@@ -48,7 +48,7 @@ I leverage the Census Tiger files to map the HHI indexes at the Census block lev
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>fitcoef</th>
+      <th>fitcoef<sup>[1](#myfootnote1)</sup></th>
       <th>R^2 adj</th>
       <th>nObs</th>
     </tr>
@@ -115,3 +115,5 @@ To examine demographic patterns, I merge my block group level HHIs with ACS bloc
 # Discussion
 
 Of course, the more we segment and constrain market definitions (ie in space or otherwise), the higher HHIs will be. Additionally, the Census does not choose its tracts, block groups, and blocks to align with local perceptions of what defines housing markets (a task particularly difficult since households at different socio-economic levels may have different market spans). This means that from the housing market perspective, these geographical cuts are likely arbitrary but the effect thereof is unclear. Arbitrary segmentation may add noise to our HHI measures and thus dilute the indexes. On the other hand, the Census chooses blocks and block groups so that demographic compositions within would be homogenous which may coincide with actual market boundaries. 
+
+<a name="myfootnote1">1</a>: proportion cheap: share of homes costing $10,000-15,000 in a block group; proportion black: share of population that's black in block group, proportion rent: share of households that rent; proportion vacant: share of units that are vacant in a block group; proportion over 65: share of households with head of house over age 65; units per person: number of housing units per person in a blcok group. 
