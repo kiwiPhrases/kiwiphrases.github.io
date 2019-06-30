@@ -108,7 +108,7 @@ print("Number of unmatched zips: %d" %C.horses.isnull().sum())
 Using the ordinary, exact match merge, Gerald finds only two green horses. Can we improve?
 **Depends**. I am usually very wary of fuzzy matching but if you know your data and it makes sense then let's proceed. 
 
-In our case, zips close to each other geographically also tend to be close to each numerically. For example, zips *900081234* and *900081235* may represent two different faces of the same building so even though *900081235* was **not** matched, it makes sense to have it match to the 900081324 stable
+In our case, 9 digit zips close to each other geographically also tend to be close to each numerically. For example, zips *900081234* and *900081235* may represent two different faces of the same building so even though *900081235* was **not** matched, it makes sense to have it match to the 900081324 stable
 
 ## Road Map
 
