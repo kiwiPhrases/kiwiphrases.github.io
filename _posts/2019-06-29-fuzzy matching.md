@@ -36,7 +36,6 @@ So what happens when we try to merge the two?
 ```python
 C = A.merge(B, on='zips', how='left')
 print("Number of unmatched zips: %d" %C.contacts.isnull().sum())
-C
 ```
 
     Number of unmatched zips: 3
@@ -104,8 +103,8 @@ C
 </div>
 
 
-
-Can we improve on the above? **Depends**. I am usually very wary of fuzzy matching but if you know your data and it makes sense then let's proceed. 
+## Can we improve? 
+**Depends**. I am usually very wary of fuzzy matching but if you know your data and it makes sense then let's proceed. 
 
 In our case, zips close to each other geographically also tend to be close to each numerically. For example, zips *900081234* and *900081235* may represent two different faces of the same building so even though *900081235* was **not** matched, it makes sense to have it match to the 900081324 stable
 
@@ -255,40 +254,17 @@ merge_nearest(A,B,'zips','contacts',threshold=1)
 </table>
 </div>
 
-
+We have given Gerald two green horses that he otherwise would not have found: Gerald is ecstatic! (release balloons)
 
 # Discussion
 
-I am sure I am performing unnecessary steps and this could be optimized in a number of ways but I have tested this on fairly large arrays and it works pretty quickly. Seems the main throttle are the initial and final merges so alleviating the latter would speed up the process
+I am sure I am performing unnecessary steps and this could be optimized in a number of ways but I have tested this on fairly large arrays and it works pretty quickly. Seems the main throttle are the initial and final merges so alleviating the latter would speed up the process.
 
 # The details
 
 ### 1. Find nearest diff
-
-
 ```python
-def findNearestDiff(left_array,right_array):
-    """
-    Code and algorythm credit goes to piRSquared from Stackoverflow.
-    Modified for use here by me
-    """
-    right_sorted  = np.sort(right_array) # sort right array
-    a  = right_sorted.searchsorted(left_array) #find closest index(sort of)
-    right      = np.minimum(a, right_sorted.shape[0] - 1)
-    left       = np.maximum(a - 1, 0)
-
-    # find differences from both right and left sides
-    right_diff = left_array - right_sorted[right]
-    left_diff  = left_array - right_sorted[left ]
-
-    #depending on which is smaller in absolute value, returns smallest diff
-    #with correct sign
-    return(np.where(np.abs(right_diff) <= left_diff, right_diff, left_diff))
-```
-
-
-```python
-diffs = findNearestDiff(C.loc[C.contacts.isnull(),'zips'], B.zips)
+diffs = getNearestDiff(C.loc[C.contacts.isnull(),'zips'], B.zips)
 print("Found smallest differences:",diffs)
 ```
 
