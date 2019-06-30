@@ -17,6 +17,8 @@ Here, I provide a quick alternative to the above solutions as derived from my st
 
 ## Gerald's Example
 
+<img src="/gerald.jpg" alt="gerald" width="100", align="center">
+
 Consider two Pandas DataFrames `A` and `B` where our primary target is `A` while `B` has some important info we need to add to `A`. 
 
 Suppose Gerald is a teddy bear that likes green horses and has stables at particular zips (stored in `A`). Gerald wants to find green horses that are at (or near) his stables from a listing of horses `B`.
@@ -257,7 +259,7 @@ merge_nearest(A,B,'zips','horses',threshold=1)
 
 We have given Gerald two green horses that he otherwise would not have found: Gerald is ecstatic! (release balloons)
 
-<img src="/gerald.jpg" alt="gerald" width="200">
+
 
 # Discussion
 
