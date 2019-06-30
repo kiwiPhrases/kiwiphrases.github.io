@@ -27,7 +27,7 @@ import pandas as pd
 import numpy as np
 
 A = pd.DataFrame({'gerald':list('teddy'), 'zips':[900081234,900081235,900081238,900105886,900107732]})
-B = pd.DataFrame({'contacts':list("greenhorse"),'zips':[900081234,900155588,900081244,900081238,900105885,900107734,900155566,500155583,200224422,900081236]})
+B = pd.DataFrame({'horses':list("greenhorse"),'zips':[900081234,900155588,900081244,900081238,900105885,900107734,900155566,500155583,200224422,900081236]})
 ```
 
 So what happens when we try to merge the two? 
@@ -35,7 +35,7 @@ So what happens when we try to merge the two?
 
 ```python
 C = A.merge(B, on='zips', how='left')
-print("Number of unmatched zips: %d" %C.contacts.isnull().sum())
+print("Number of unmatched zips: %d" %C.horses.isnull().sum())
 ```
 
     Number of unmatched zips: 3
@@ -64,7 +64,7 @@ print("Number of unmatched zips: %d" %C.contacts.isnull().sum())
       <th></th>
       <th>gerald</th>
       <th>zips</th>
-      <th>contacts</th>
+      <th>horses</th>
     </tr>
   </thead>
   <tbody>
@@ -177,7 +177,7 @@ def merge_nearest(A, B, merge_col, mismatch_col, threshold=1):
 
 
 ```python
-merge_nearest(A,B,'zips','contacts',threshold=1)
+merge_nearest(A,B,'zips','horses',threshold=1)
 ```
 
     Performing initial merge
@@ -210,7 +210,7 @@ merge_nearest(A,B,'zips','contacts',threshold=1)
       <th></th>
       <th>gerald</th>
       <th>zips</th>
-      <th>contacts</th>
+      <th>horses</th>
       <th>nearest_zips</th>
     </tr>
   </thead>
@@ -264,7 +264,7 @@ I am sure I am performing unnecessary steps and this could be optimized in a num
 
 ### 1. Find nearest diff
 ```python
-diffs = getNearestDiff(C.loc[C.contacts.isnull(),'zips'], B.zips)
+diffs = getNearestDiff(C.loc[C.horses.isnull(),'zips'], B.zips)
 print("Found smallest differences:",diffs)
 ```
 
@@ -277,7 +277,7 @@ print("Found smallest differences:",diffs)
 ```python
 d_thresh = 1
 
-tieIn = pd.DataFrame({'unmatched':C.loc[C.contacts.isnull(),'zips'],'nearest_matched':C.loc[C.contacts.isnull(),'zips'] - diffs})
+tieIn = pd.DataFrame({'unmatched':C.loc[C.horses.isnull(),'zips'],'nearest_matched':C.loc[C.horses.isnull(),'zips'] - diffs})
 tieIn.loc[np.abs(diffs)>d_thresh,'nearest_matched'] = np.nan
 print("Map unmatched values to nearest matched value:")
 tieIn
@@ -365,7 +365,7 @@ modB
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>contacts</th>
+      <th>horses</th>
       <th>nearest_zip</th>
       <th>zips</th>
     </tr>
@@ -462,7 +462,7 @@ Now that modified `B` contains the nearest matches too, we can re-merge. As can 
 
 ```python
 C = A.merge(modB, on='zips', how='left')
-print("Number of unmatched zips: %d" %C.contacts.isnull().sum())
+print("Number of unmatched zips: %d" %C.horses.isnull().sum())
 C
 ```
 
@@ -492,7 +492,7 @@ C
       <th></th>
       <th>gerald</th>
       <th>zips</th>
-      <th>contacts</th>
+      <th>horses</th>
       <th>nearest_zip</th>
     </tr>
   </thead>
