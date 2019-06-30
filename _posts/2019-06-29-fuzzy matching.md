@@ -539,10 +539,3 @@ C
   </tbody>
 </table>
 </div>
-
-
-
-
-```python
-
-```
