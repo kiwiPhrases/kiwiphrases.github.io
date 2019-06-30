@@ -17,7 +17,7 @@ Here, I provide a quick alternative to the above solutions as derived from my st
 
 ## Gerald's Example
 
-Consider two Pandas dataframes `A` and `B` where our primary target is `A` while `B` has some important info we need to add to `A`. 
+Consider two Pandas DataFrames `A` and `B` where our primary target is `A` while `B` has some important info we need to add to `A`. 
 
 Suppose Gerald is a teddy bear that likes green horses and has stables at particular zips (stored in `A`). Gerald wants to find green horses that are at (or near) his stables from a listing of horses `B`.
 
@@ -30,7 +30,7 @@ A = pd.DataFrame({'gerald':list('teddy'), 'zips':[900081234,900081235,900081238,
 B = pd.DataFrame({'horses':list("greenhorse"),'zips':[900081234,900155588,900081244,900081238,900105885,900107734,900155566,500155583,200224422,900081236]})
 ```
 
-So what happens when we try to merge the two? 
+So what happens when we try to merge the DataFrames to help Gerald find green horses?
 
 
 ```python
@@ -104,6 +104,7 @@ print("Number of unmatched zips: %d" %C.horses.isnull().sum())
 
 
 ## Can we improve? 
+Using the ordinary, exact match merge, Gerald finds only two green horses. Can we improve?
 **Depends**. I am usually very wary of fuzzy matching but if you know your data and it makes sense then let's proceed. 
 
 In our case, zips close to each other geographically also tend to be close to each numerically. For example, zips *900081234* and *900081235* may represent two different faces of the same building so even though *900081235* was **not** matched, it makes sense to have it match to the 900081324 stable
@@ -256,9 +257,11 @@ merge_nearest(A,B,'zips','horses',threshold=1)
 
 We have given Gerald two green horses that he otherwise would not have found: Gerald is ecstatic! (release balloons)
 
+<img src="/gerald.jpg" alt="gerald" width="200">
+
 # Discussion
 
-I am sure I am performing unnecessary steps and this could be optimized in a number of ways but I have tested this on fairly large arrays and it works pretty quickly. Seems the main throttle are the initial and final merges so alleviating the latter would speed up the process.
+I am sure I am performing unnecessary steps and this could be optimized in a number of ways but I have tested this on fairly large arrays and it works pretty quickly. The main throttles are the merges. For example, I don't have to remerge two entire dataframes, I could remerge only the unmatched subsets. 
 
 # The details
 
