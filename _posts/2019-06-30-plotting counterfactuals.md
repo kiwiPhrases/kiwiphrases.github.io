@@ -9,15 +9,15 @@ categories: research
 
 You estimated your Difference-in-Difference (DiD) model, or some variation thereof, and are ecstatic by the results. Are they valid though? Did you validate your parallel assumptions or do sensitivity analysis? What if visually it is difficult to discern whether your parallel assumptions hold while your statistical tests return mixed or ambiguous results? Well, fear not, my hardy econometrician (or statistician)! You can plot the fitted counterfactual against both the observed and fitted results to see whether the estimated counterfactual makes any sense and, if it doesn't, why.
 
-In this notebook, I simply aim to show how one would go about [plotting the estimated counterfactuals](#plotting-counterfactuals) and go over an real-world example where such an analysis would be useful. It is more or less implicitly assumed that you are quite familiar with DiDs and their nuances. Nonetheless, this rather length post should also provide a good refresher into DiDs. 
+In this notebook, I simply aim to show how one would go about [plotting the estimated counterfactuals](#plotting-counterfactuals) and go over a real-world example where such an analysis would be useful. It is more or less implicitly assumed that you are quite familiar with DiDs and their nuances. Nonetheless, this rather length post should also provide a good refresher into DiDs. 
 
 However, this notebook isn't only about DiDs.  
 
-1. Have you ever tried generating data for a DiD model? It's cumbersome and I show you how to do it [here](#generating-data)
+1. Have you ever tried generating data for a DiD model? It's cumbersome and I show you how to do it [here](#generating-the-data)
 
-2. How good are you with plotting? Subplots and loops over them are [here]((#visual-inspection)) 
+2. How good are you with plotting? Subplots and loops over them are [here]((#visual-inspection-of-generated-data)) 
 
-3. Perhaps most importantly, there is a useful exercise in exploring the `statsmodels` module in [here](#statsmodel) - including how to extract fitted parameters and do useful stuff with them
+3. Perhaps most importantly, there is a useful exercise in exploring the `statsmodels` module in [here](#fit-the-difference-in-difference-to-the-data) - including how to extract fitted parameters and do useful stuff with them
 
 4. A disussion on how you want to tailor your DiD model and how to interpret the visual results of your fitted counterfactual is [here](#discussion)
 
@@ -39,7 +39,7 @@ This assessment was necessary because placebo tests on the parallel trends assum
 
 I'd look over them if I were me
 
-## [Generating the data](#generating-data)
+## Generating the data
 
 If you're curious how the estimation responds to various models, feel free to experiment around with the paramaters
 
@@ -109,7 +109,7 @@ df.set_index(['subject','date'],inplace=True)
 df.index.names = ['subject','date']
 ```
 
-## [Visual inspection of generated data](#visual-inspection)
+## Visual inspection of generated data
 
 The use of `plt.subplots` and ability to iterate through the yielded *axes* to reduce repeated code is one of the pretty things about Matplotlib. 
 
@@ -162,7 +162,7 @@ print("The true effect is: %.2f" %trueATE)
     
 
 
-![png](output_11_1.png)
+![png](/output_11_1.png)
 
 
 ## [Fit Difference-in-Difference to the data](#statsmodel)
@@ -363,7 +363,7 @@ fitted.summary()
 
 
 
-## [Plot Fitted Lines and fitted counterfactuals](#plotting-counterfactuals)
+## Plot Fitted Lines and fitted counterfactuals
 
 To plot fitted lines, we simply take the dot product between the estimated coefficients and data. You can access the fitted parameters as a `pd.Series` by simply calling the `.params` attribute of the object that's returned from the regression. 
 
@@ -456,10 +456,10 @@ print("Estimated ATE is: %.2f" %((df.loc[df.treated==1,'fitted']-df.loc[df.treat
     
 
 
-![png](output_24_1.png)
+![png](/output_24_1.png)
 
 
-# [Discussion](#discussion)
+# Discussion
 
 ### Fitted trends vs observed trends
 Note that in the above graph, the fitted lines and counterfactual do not align with the observed outcomes after the treatment period. Why? Well, the estimated coefficent of 55 for ATE in the actual model functions like a shifter so all estimated time fixed effects after December 2019 must compensate for that shift so that at least *on average* the trends match. As expected, we can see that the fitted and observed trends cross at about the half-way point in 2020...or, as you have guessed, the average. Nevertheless, if we use the fitted lines to estimate the ATE, we can a pretty close figure. 
