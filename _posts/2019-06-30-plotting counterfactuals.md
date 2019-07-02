@@ -11,7 +11,7 @@ You estimated your Difference-in-Difference (DiD) model, or some variation there
 
 In this notebook, I simply aim to show how one would go about [plotting the estimated counterfactuals](#plot-fitted-lines-and-fitted-counterfactuals) and go over a real-world example where such an analysis would be useful. It is more or less implicitly assumed that you are quite familiar with DiDs and their nuances. Nonetheless, this rather length post should also provide a good refresher into DiDs. 
 
-However, this notebook isn't only about DiDs.  
+However, this notebook isn't only about DiDs:  
 
 1. Have you ever tried generating data for a DiD model? It's cumbersome and I show you how to do it [here](#generating-the-data)
 
