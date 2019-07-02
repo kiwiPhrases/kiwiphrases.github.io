@@ -9,7 +9,7 @@ categories: research
 
 You estimated your Difference-in-Difference (DiD) model, or some variation thereof, and are ecstatic by the results. Are they valid though? Did you validate your parallel assumptions or do sensitivity analysis? What if visually it is difficult to discern whether your parallel assumptions hold while your statistical tests return mixed or ambiguous results? Well, fear not, my hardy econometrician (or statistician)! You can plot the fitted counterfactual against both the observed and fitted results to see whether the estimated counterfactual makes any sense and, if it doesn't, why.
 
-In this notebook, I simply aim to show how one would go about [plotting the estimated counterfactuals](#plotting-counterfactuals) and go over a real-world example where such an analysis would be useful. It is more or less implicitly assumed that you are quite familiar with DiDs and their nuances. Nonetheless, this rather length post should also provide a good refresher into DiDs. 
+In this notebook, I simply aim to show how one would go about [plotting the estimated counterfactuals](#plot-fitted-lines-and-fitted-counterfactuals) and go over a real-world example where such an analysis would be useful. It is more or less implicitly assumed that you are quite familiar with DiDs and their nuances. Nonetheless, this rather length post should also provide a good refresher into DiDs. 
 
 However, this notebook isn't only about DiDs.  
 
