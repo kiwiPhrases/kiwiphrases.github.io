@@ -165,7 +165,7 @@ print("The true effect is: %.2f" %trueATE)
 ![png](/output_11_1.png)
 
 
-## [Fit Difference-in-Difference to the data](#statsmodel)
+## Fit Difference-in-Difference to the data
 
 `statsmodels` competes well against R's OLS and formula capabilities. In another notebook, I outline a few other helpful functions that can mimic some of the STATA regression estimation capabilities (ie estimating multiple regressions). However, it is Python's capability to work with strings and `statsmodels`' formula capabilities that steal the day. 
 
