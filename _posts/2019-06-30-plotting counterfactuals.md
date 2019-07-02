@@ -15,7 +15,7 @@ However, this notebook isn't only about DiDs.
 
 1. Have you ever tried generating data for a DiD model? It's cumbersome and I show you how to do it [here](#generating-the-data)
 
-2. How good are you with plotting? Subplots and loops over them are [here]((#visual-inspection-of-generated-data)) 
+2. How good are you with plotting? Subplots and loops over them are [here](#visual-inspection-of-generated-data)
 
 3. Perhaps most importantly, there is a useful exercise in exploring the `statsmodels` module in [here](#fit-the-difference-in-difference-to-the-data) - including how to extract fitted parameters and do useful stuff with them
 
@@ -135,7 +135,7 @@ for ax,title in zip(axes.flatten(),titles):
 ```
 
 
-![png](output_9_0.png)
+![png](/output_9_0.png)
 
 
 ## True Average Treatment Effect
@@ -376,11 +376,6 @@ fitted.params.head(n=10)
 ```
 
     Accessing the first 10 fitted parameters:
-    
-
-
-
-
     Intercept        102.194789
     post              -0.076707
     treated            9.942310
@@ -409,11 +404,6 @@ np.dot(df.loc[:,fitted.params.index],fitted.params) # take the dot product
 ```
 
     The fitted values are thus:
-    
-
-
-
-
     array([100.43306767, 100.81196253, 101.29202643, ..., 148.27925361,
            155.52465559, 159.76288131])
 
