@@ -7,7 +7,7 @@ categories: research
 
 # Introduction
 
-You estimated your Difference-in-Difference (DiD) model, or some variation thereof, and are ecstatic by the results. Are they valid though? Did you validate your parallel assumptions or do sensitivity analysis? What if visually it is difficult to discern whether your parallel assumptions hold while your statistical tests return mixed or ambiguous results? Well, fear not, my hardy econometrician (or statistician)! You can plot the fitted counterfactual against both the observed and fitted results to see whether the estimated counterfactual makes any sense and, if it doesn't, why.
+You estimated your Difference-in-Difference (DiD) model, or some variation thereof, and are ecstatic by the results. Are they valid though? Did you validate your parallel assumptions or do sensitivity analysis? What if visually it is difficult to discern whether your parallel assumptions hold while your statistical tests return mixed or ambiguous results? Well, fear not, my hardy econometrician (or statistician)! You can plot the fitted counterfactual against both the observed and fitted results to see whether the estimated counterfactual makes any sense and, if it doesn't, why. Conceptually, the exercise is incredibly simple since the treatment effect parameter just shifts the counter-factual line away from the treated line. 
 
 In this notebook, I simply aim to show how one would go about [plotting the estimated counterfactuals](#plot-fitted-lines-and-fitted-counterfactuals) and go over a real-world example where such an analysis would be useful. It is more or less implicitly assumed that you are quite familiar with DiDs and their nuances. Nonetheless, this rather length post should also provide a good refresher into DiDs. 
 
@@ -23,13 +23,13 @@ However, this notebook isn't only about DiDs:
 
 # Motivation and Example
 
-In some of my recent work on residential mobility, I have been attempting to estimate a DiD model but my results have been mixed and quite sensitive to both specification and data subset. As a result, I decided to investigate the underlying issues which led me to plot some of the fitted counterfactual plots. Admitedly, these plots are a bit of a mess and ones [below](#visual-inspection) are much better illustrations #practice. So what about the lines below? 
+In some of my recent work on residential mobility, I have been attempting to estimate a DiD model but my results have been mixed and quite sensitive to both specification and data subset. As a result, I decided to investigate the underlying issues which led me to plot some of the fitted counterfactual plots. Admitedly, these plots are a bit of a mess and ones [below](#visual-inspection) are much better illustrations #practice. Anyway, what about the lines below? 
 
 ![exampleCounterFactual](/RedCounterfactual.png)
 
 In the first plot, we see the observed and fitted trend lines for the treated (red) and the control (gray) groups. It is immediately apparent that the fitted line for the treated group does not quite capture the observed average trend, especially after 2005. However, the first plot is mostly provided to show the average observed trends. 
 
-In the 2nd plot, we see 4 lines. The solid red line is the observed average trend for the treated, the dashed red line is the fitted trend for the treated group, the blue dashed line is the estimated counterfactual for the treated group, and the dashed gray line is the fitted trend for the control group. Whew, that was a mouthful. One thing that is obvious is that the red line's trend for the treated group began an upward trend after the treatment year in year 2000 while the trend for the control group is either plateauing or decreasing. The fitted treated trend fails to capture that uptick and the fitted counter factual closely follows the fitted trend so the ATE is clearly underestimated. In some other plots, I see instances in which the counterfactual is way above the fitted line. All of these things suggest that the model is underspecified and cannot quite fit the observed trends properly.
+In the 2nd plot, we see 4 lines. The solid red line is the observed average trend for the treated, the dashed red line is the fitted trend for the treated group, the blue dashed line is the estimated counterfactual for the treated group, and the dashed gray line is the fitted trend for the control group. Whew, that was a mouthful. One thing that is obvious is that the red line's trend for the treated group began an upward trend after the treatment year in year 2000 while the trend for the control group is either plateauing or decreasing. The fitted trend for the treated fails to capture that uptick and the fitted counter factual closely follows the fitted trend so the ATE is clearly underestimated. All of these things suggest that the model is underspecified and cannot quite fit the observed trends properly.
 
 
 This assessment was necessary because placebo tests on the parallel trends assumption were ambiguous and results highly variable. So when neither the placebo tests nor the robustness checks yield any meaningful results, it is sometimes necessary to find other explatory vehicles that could point out the issues. So, how do we go about producing the above plots? Below, I have an extensive example. 
@@ -45,7 +45,7 @@ If you're curious how the estimation responds to various models, feel free to ex
 
 
 ```python
-## load needed modules
+## load our 2 main data modules
 import pandas as pd
 import numpy as np
 
@@ -64,11 +64,11 @@ import re
 
 There are a few functions below that you may wish to familiarize yourself with (if you aren't already):
     
-1. `np.tile` repeats a whole array n times (ie `x=[1,2,3]` then `np.tile(x,2)` gives `[1,2,3,1,2,3]`). This is different from the `np.repeat` function that repeats each element n times (ie `x=[1,2,3]` then `np.repeat(x,2)` gives `[1,1,2,2,3,3]`)
+1. `np.tile` repeats a whole array n times (ie with `x=[1,2,3]`, `np.tile(x,2)` gives `[1,2,3,1,2,3]`). This is different from the `np.repeat` function that repeats each element n times (ie with `x=[1,2,3]`, `np.repeat(x,2)` gives `[1,1,2,2,3,3]`)
 2. `pd.date_range` enables you to create timestamps at regular intervals. I encourage you to explore Pandas' slew of time-related functions because I am pretty convinced it is an unparalleled toolset. Note, you can also casually index by timestamps (ie `df.date > '1/1/2020'`) 
-3. `np.random.normal` and all other methods under `np.random.` are worth taking an interest in - especially if you have Bayesian inclinations. 
+3. `np.random.normal` and all other methods under `np.random` are worth taking an interest in - especially if you have Bayesian inclinations. 
 
-You'll also note a liberal sprinkling of `.unstack` throughout my code following the `.set_index` on 2 columns. What Stata, R,  Excel, and countless other software packages lack is the joy of the [`MultiIndex`](https://pandas.pydata.org/pandas-docs/stable/user_guide/advanced.html) in Pandas. I use it liberally in almost all of my work because it is a splendid and unparalleled contraption that demonstrates why Python and Pandas are, at least in the immediate future, the best suited-up mini-van (and maybe pickup truck) for data work.
+You'll also note a liberal sprinkling of `.unstack` throughout my code following the `.set_index` command on 2 columns. What Stata, R,  Excel, and countless other software packages lack is the joy of the [`MultiIndex`](https://pandas.pydata.org/pandas-docs/stable/user_guide/advanced.html) in Pandas. I use it liberally in almost all of my work because it is a splendid and unparalleled contraption that demonstrates why Python and Pandas are, at least in the immediate future, the best suited-up mini-van (and maybe pickup truck) for data work.
 
 
 ```python
@@ -167,7 +167,7 @@ print("The true effect is: %.2f" %trueATE)
 
 ## Fit Difference-in-Difference to the data
 
-`statsmodels` competes well against R's OLS and formula capabilities. In another notebook, I outline a few other helpful functions that can mimic some of the STATA regression estimation capabilities (ie estimating multiple regressions). However, it is Python's capability to work with strings and `statsmodels`' formula capabilities that steal the day. 
+`statsmodels` competes well against R's OLS and formula capabilities. In another notebook, I outline a few other helpful functions that can mimic some of the STATA regression estimation capabilities (ie estimating multiple regressions). However, it is the concert of Python's capability to work with strings and `statsmodels`' formula capabilities that steal the day. It makes the editing of your formulas very straightforward without having to type out every single variable. 
 
 
 ```python
@@ -289,61 +289,7 @@ fitted.summary()
   <th>December_2019</th>  <td>    9.6573</td> <td>    0.964</td> <td>   10.021</td> <td> 0.000</td> <td>    7.768</td> <td>   11.546</td>
 </tr>
 <tr>
-  <th>December_2020</th>  <td>   47.7025</td> <td>    4.482</td> <td>   10.644</td> <td> 0.000</td> <td>   38.919</td> <td>   56.486</td>
-</tr>
-<tr>
-  <th>February_2019</th>  <td>   -1.3828</td> <td>    0.930</td> <td>   -1.487</td> <td> 0.137</td> <td>   -3.205</td> <td>    0.440</td>
-</tr>
-<tr>
-  <th>February_2020</th>  <td>  -11.6818</td> <td>    3.804</td> <td>   -3.071</td> <td> 0.002</td> <td>  -19.137</td> <td>   -4.226</td>
-</tr>
-<tr>
-  <th>January_2019</th>   <td>   -1.7617</td> <td>    1.055</td> <td>   -1.670</td> <td> 0.095</td> <td>   -3.829</td> <td>    0.306</td>
-</tr>
-<tr>
-  <th>January_2020</th>   <td>  -17.3728</td> <td>    4.386</td> <td>   -3.961</td> <td> 0.000</td> <td>  -25.968</td> <td>   -8.777</td>
-</tr>
-<tr>
-  <th>July_2019</th>      <td>    4.8080</td> <td>    0.904</td> <td>    5.317</td> <td> 0.000</td> <td>    3.036</td> <td>    6.580</td>
-</tr>
-<tr>
-  <th>July_2020</th>      <td>   17.7083</td> <td>    2.052</td> <td>    8.629</td> <td> 0.000</td> <td>   13.686</td> <td>   21.731</td>
-</tr>
-<tr>
-  <th>June_2019</th>      <td>    2.5955</td> <td>    0.996</td> <td>    2.605</td> <td> 0.009</td> <td>    0.643</td> <td>    4.548</td>
-</tr>
-<tr>
-  <th>June_2020</th>      <td>   12.3021</td> <td>    2.107</td> <td>    5.837</td> <td> 0.000</td> <td>    8.172</td> <td>   16.433</td>
-</tr>
-<tr>
-  <th>March_2019</th>     <td>   -0.9028</td> <td>    0.962</td> <td>   -0.938</td> <td> 0.348</td> <td>   -2.789</td> <td>    0.984</td>
-</tr>
-<tr>
-  <th>March_2020</th>     <td>   -5.4052</td> <td>    3.130</td> <td>   -1.727</td> <td> 0.084</td> <td>  -11.540</td> <td>    0.730</td>
-</tr>
-<tr>
-  <th>May_2019</th>       <td>    0.9869</td> <td>    1.042</td> <td>    0.947</td> <td> 0.343</td> <td>   -1.055</td> <td>    3.029</td>
-</tr>
-<tr>
-  <th>May_2020</th>       <td>    5.1231</td> <td>    2.288</td> <td>    2.239</td> <td> 0.025</td> <td>    0.639</td> <td>    9.607</td>
-</tr>
-<tr>
-  <th>November_2019</th>  <td>    7.3115</td> <td>    1.004</td> <td>    7.281</td> <td> 0.000</td> <td>    5.343</td> <td>    9.280</td>
-</tr>
-<tr>
-  <th>November_2020</th>  <td>   43.4643</td> <td>    3.845</td> <td>   11.303</td> <td> 0.000</td> <td>   35.928</td> <td>   51.001</td>
-</tr>
-<tr>
-  <th>October_2019</th>   <td>    5.4727</td> <td>    1.072</td> <td>    5.106</td> <td> 0.000</td> <td>    3.372</td> <td>    7.574</td>
-</tr>
-<tr>
-  <th>October_2020</th>   <td>   36.2189</td> <td>    3.309</td> <td>   10.945</td> <td> 0.000</td> <td>   29.733</td> <td>   42.705</td>
-</tr>
-<tr>
-  <th>September_2019</th> <td>    6.3963</td> <td>    1.127</td> <td>    5.675</td> <td> 0.000</td> <td>    4.187</td> <td>    8.605</td>
-</tr>
-<tr>
-  <th>September_2020</th> <td>   30.0156</td> <td>    2.700</td> <td>   11.117</td> <td> 0.000</td> <td>   24.724</td> <td>   35.308</td>
+...
 </tr>
 </table>
 <table class="simpletable">
