@@ -24,12 +24,6 @@ github_username:  kiwiphrases
 stackoverflow_username: 1978817
 linkedin_username: gene-burinsky-29820527
 
-# Analytics
-analytics:
-  provider               : "google-gtag"
-  google:
-    tracking_id          : UA-143223317-1
-
 google_analytics: UA-143223317-1
     
 # Build settings
