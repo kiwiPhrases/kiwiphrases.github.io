@@ -30,6 +30,8 @@ analytics:
   google:
     tracking_id          : UA-143223317-1
 
+google_analytics: UA-143223317-1
+    
 # Build settings
 markdown: kramdown
 theme: minima
