@@ -7,7 +7,9 @@ categories: code
 
 # Introduction
 
-You just estimated a regression, got results, and now either your model or your colleague suggests you change or elaborate on the specification. Repeat that a few times and reporting results quickly becomes a headache. It simply is not practical or palatable to report every single full regression table and you begin to sweat at the brow in yearning for some relief. Smoke, mirrors, and a caffeinated and bespectacled mouse drop into the room. The mouse exclaims, "I have the aid you seek, you sweaty human!"
+You just estimated a regression, got results, and now either your model or your colleague suggests you change or elaborate on the specification. Repeat that a few times and reporting results quickly becomes a headache. It simply is not practical or palatable to report every single full regression table and you begin to sweat at the brow in yearning for some relief. 
+
+Smoke, mirrors, and a caffeinated and bespectacled mouse drops into your room. The mouse exclaims, "I have the aid you seek, you sweaty beast!"
 
 Rarely will I offer kind words about STATA (or SAS) but there is one rather nifty functionality it offers that R, Python, and a few other open source tools still seem to lack: ability to run, organize, and report estimates from multiple regressions in a relatively high level yet flexible framework. By no means do I try to recreate STATA's framework but I do exert effort to lighten your burden in case you have similar needs.
 
