@@ -36,9 +36,8 @@ xList = ['+'.join(occupant)+"+"+"+".join(structural),
          '+'.join(structural)]
 
 # estimate the regressions and get output
-regResults = runRegressions('RENT',xList,key_vars=['severelyInadequate'], data = df,
+runRegressions('RENT',xList,key_vars=['severelyInadequate'], data = df,
                             specification_names = ['demographics and structure','structure'])
-regResults
 ```
 
     Estimating specification: demographics and structure
@@ -48,9 +47,6 @@ regResults
     Estimation done
     Extracting results
     
-
-
-
 
 <div>
 <style scoped>
@@ -109,19 +105,9 @@ regResults
 
 ```python
 # estimate the regressions and get output
-regResults = runRegressions('RENT',xList,key_vars=['severelyInadequate'], data = df,
-                            specification_names = ['demographics and structure','structure'])
-regResults
+runRegressions('RENT',xList,key_vars=['severelyInadequate'], data = df)
+
 ```
-
-    Estimating specification: 0
-    Estimating specification: 1
-    Estimation done
-    Extracting results
-    
-
-
-
 
 <div>
 <style scoped>
@@ -157,17 +143,17 @@ regResults
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.155</td>
-      <td>370.001</td>
+      <td>0.149</td>
+      <td>365.514</td>
       <td>711</td>
-      <td>-61.3555 (0.729)</td>
+      <td>-95.0526 (0.602)</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.131</td>
-      <td>51.6905</td>
+      <td>0.123</td>
+      <td>27.6683</td>
       <td>711</td>
-      <td>-55.9576 (0.769)</td>
+      <td>-86.4810 (0.656)</td>
     </tr>
   </tbody>
 </table>
