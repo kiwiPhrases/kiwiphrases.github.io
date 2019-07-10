@@ -7,7 +7,7 @@ categories: code
 
 # Introduction
 
-You just estimated a regression, got results, and now either your model or your colleague suggests you change or elaborate on the specification. Repeat that a few times and reporting results quickly becomes a headache. It simply is not practical or palatable to report every single full regression table and you begin to sweat at the brow in yearning for some relief. 
+You just estimated a regression, got [results](#full-table-yikes), and now either your model or your colleague suggests you change or elaborate on the specification. Repeat that a few times and reporting results quickly becomes a headache. It simply is not practical or palatable to report every single [full regression table]((#full-table-yikes)). You begin to sweat at the brow in yearning for some relief. 
 
 Smoke, mirrors, and a caffeinated and bespectacled mouse drops into your room. The mouse exclaims, "I have the aid you seek, you sweaty beast!"
 
@@ -41,14 +41,6 @@ xList = ['+'.join(occupant)+"+"+"+".join(structural),
 runRegressions('RENT',xList,key_vars=['severelyInadequate'], data = df,
                             specification_names = ['demographics and structure','structure'])
 ```
-
-    Estimating specification: demographics and structure
-    Covariance type: HC0
-    Estimating specification: structure
-    Covariance type: HC0
-    Estimation done
-    Extracting results
-    
 
 <div>
 <style scoped>
@@ -181,7 +173,85 @@ help(runRegressions)
         and returns coefficent estimate for key_vars, p-value, and other stats for each
         specification in a single table.
     
-    
+## Full Table Yikes
+
+
+Here is what a full statsmodels regression summary table looks like. Imagine asking yourself or your readers to read through many of these - especially if you are only interested in a small subset of the variables reported below. (**scream face**)
+
+
+<table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>          <td>RENT</td>       <th>  R-squared:         </th> <td>   0.158</td> 
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.149</td> 
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   12.01</td> 
+</tr>
+<tr>
+  <th>Date:</th>             <td>Wed, 10 Jul 2019</td> <th>  Prob (F-statistic):</th> <td>1.61e-14</td> 
+</tr>
+<tr>
+  <th>Time:</th>                 <td>09:31:52</td>     <th>  Log-Likelihood:    </th> <td> -5442.8</td> 
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>   711</td>      <th>  AIC:               </th> <td>1.090e+04</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>   703</td>      <th>  BIC:               </th> <td>1.094e+04</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     7</td>      <th>                     </th>     <td> </td>    
+</tr>
+<tr>
+  <th>Covariance Type:</th>         <td>HC0</td>       <th>                     </th>     <td> </td>    
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+           <td></td>             <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>          <td>   -1.6921</td> <td>  129.803</td> <td>   -0.013</td> <td> 0.990</td> <td> -256.102</td> <td>  252.718</td>
+</tr>
+<tr>
+  <th>GARAGE[T.Yes]</th>      <td>   94.5023</td> <td>   53.770</td> <td>    1.758</td> <td> 0.079</td> <td>  -10.884</td> <td>  199.889</td>
+</tr>
+<tr>
+  <th>HHAGE</th>              <td>    4.7165</td> <td>    2.014</td> <td>    2.342</td> <td> 0.019</td> <td>    0.770</td> <td>    8.663</td>
+</tr>
+<tr>
+  <th>NUMADULTS</th>          <td>   91.5411</td> <td>   31.927</td> <td>    2.867</td> <td> 0.004</td> <td>   28.964</td> <td>  154.118</td>
+</tr>
+<tr>
+  <th>lengthTenure</th>       <td>  -13.3735</td> <td>    6.220</td> <td>   -2.150</td> <td> 0.032</td> <td>  -25.564</td> <td>   -1.183</td>
+</tr>
+<tr>
+  <th>BEDROOMS</th>           <td>  134.4728</td> <td>   32.704</td> <td>    4.112</td> <td> 0.000</td> <td>   70.375</td> <td>  198.571</td>
+</tr>
+<tr>
+  <th>STORIES</th>            <td>  139.3267</td> <td>   26.671</td> <td>    5.224</td> <td> 0.000</td> <td>   87.052</td> <td>  191.601</td>
+</tr>
+<tr>
+  <th>severelyInadequate</th> <td>  -95.0526</td> <td>  182.032</td> <td>   -0.522</td> <td> 0.602</td> <td> -451.830</td> <td>  261.724</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td>414.521</td> <th>  Durbin-Watson:     </th> <td>   1.930</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.000</td>  <th>  Jarque-Bera (JB):  </th> <td>4054.431</td>
+</tr>
+<tr>
+  <th>Skew:</th>          <td> 2.477</td>  <th>  Prob(JB):          </th> <td>    0.00</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td>13.598</td>  <th>  Cond. No.          </th> <td>    366.</td>
+</tr>
+</table><br/><br/>Warnings:<br/>[1] Standard Errors are heteroscedasticity robust (HC0)    
 
 # The Code
 
