@@ -7,7 +7,7 @@ categories: research
 
 # Introduction
 
-![hipsterCoffee](/hipsterCoffee.jpg)
+<img style="float: left;" src="/hipsterCoffee.jpg" alt="gerald" width="200">
 
 If I were to stroll down some streets in Milwaukee, what should I expect to see? To anyone familiar or living in Milwaukee, these will be obvious but to an outsider, such as myself, without these statistics on rented structures, I might as well be trying to guess whether hipster turtles prefer mock Van Gogh prints or posters of Wes Anderson movies on the side (or maybe bottom - how do turtle shells work ?) of their shells. 
 
