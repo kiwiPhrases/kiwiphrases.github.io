@@ -7,13 +7,18 @@ categories: research
 
 # Introduction
 
+
+<img style="float: left;" src="/hipsterCoffee.jpg" alt="gerald" width="300">
+
 If I were to stroll down some streets in Milwaukee, what should I expect to see? To anyone familiar or living in Milwaukee, these will be obvious but to an outsider, such as myself, without these statistics on rented structures, I might as well be trying to guess whether hipster turtles prefer mock Van Gogh prints or posters of Wes Anderson movies on the side (or maybe bottom - how do turtle shells work ?) of their shells. 
 
 I use 2015 American Household Survey (AHS) data to characterize the structures that are rented in Milwaukee. Many of the graphs confirm things we already know but it is nonetheless a good exercise to verify our intuition. These are mostly exploratory exercises akin to throwing darts in the dark and, hopefully, as the series go on, questions and answers will be refined. I may make this a regular post for other cities too when the idea aquifer is running dry. If you have suggestions or aching questions - I welcome your input. 
 
-<img style="float: left;" src="/hipsterCoffee.jpg" alt="gerald" width="200">
 
 Complete non-sequitor, it is perhaps ironic that this post is composed in a Canadian hipster cafe whilst taking a fresh of breath air away from the [poor](https://la.curbed.com/2019/4/24/18514407/los-angeles-smoggiest-city-america) and [worsening](https://laist.com/2018/10/03/take_a_deep_breath_and_read_about_how_bad_la_smog_really_is.php) air quality in Los Angeles. As always, notebooks used to generate the items below are available on [GitHub](https://github.com/kiwiPhrases/characterizing-renters). 
+
+
+
 
 # What do people rent (or get to rent?)
 
