@@ -15,7 +15,7 @@ If I were to stroll down some streets in Milwaukee, what should I expect to see?
 I use 2015 American Household Survey (AHS) data to characterize the structures that are rented in Milwaukee. Many of the graphs confirm things we already know but it is nonetheless a good exercise to verify our intuition. These are mostly exploratory exercises akin to throwing darts in the dark and, hopefully, as the series go on, questions and answers will be refined. I may make this a regular post for other cities too when the idea aquifer is running dry. If you have suggestions or aching questions - I welcome your input. 
 
 
-Complete non-sequitor, it is perhaps ironic that this post is composed in a Canadian hipster cafe whilst taking a fresh of breath air away from the [poor](https://la.curbed.com/2019/4/24/18514407/los-angeles-smoggiest-city-america) and [worsening](https://laist.com/2018/10/03/take_a_deep_breath_and_read_about_how_bad_la_smog_really_is.php) air quality in Los Angeles. As always, notebooks used to generate the items below are available on [GitHub](https://github.com/kiwiPhrases/characterizing-renters). 
+Complete non-sequitor, it is perhaps ironic that this post on US cities is composed in a Canadian hipster cafe whilst taking a fresh of breath air away from the [poor](https://la.curbed.com/2019/4/24/18514407/los-angeles-smoggiest-city-america) and [worsening](https://laist.com/2018/10/03/take_a_deep_breath_and_read_about_how_bad_la_smog_really_is.php) air quality in Los Angeles. As always, notebooks used to generate the items below are available on [GitHub](https://github.com/kiwiPhrases/characterizing-renters). 
 
 
 
