@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Is housing inadequacy racist?"
-date:   2019-07-19 5:55:00 -0700
+date:   2019-07-24 5:55:00 -0700
 categories: research
 ---
 
