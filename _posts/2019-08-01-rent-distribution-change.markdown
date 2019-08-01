@@ -75,19 +75,19 @@ Instead of using static definition of what is a low-and high-cost rent bin, I ca
 
 ## Validation
 
-As above, I plot the plots for the biggest and smallest changes according to the metric. As for the static change metric, the changes in this case also make complete sense and reflect the desired results. 
+As above, I plot the before and after rent distributions for block groups that experienced the biggest and smallest changes according to the metric. When the index takes on the value of 1, all rental units that rented below the median are suggested to have shifted to be above the  median. This is exactly what we see in the High graph below. Conversely, if the metric is -2 then all units that were renting above the median in 2013 disappear so that all units by the latter survey rent below the median. Again, the Low graph reflects precisely that. 
 
 ![metricHigh2](/images/output_18_0.png)
 
 ![metricLow2](/images/output_18_1.png)
 
-As seen below, the dynamic metric corresponds a little better with the changes in the median ranks in the bottom right corner than the static change metric. The correspondence between the two seems best at in the lowest ranked 3000 blokck groups but the correspondance falls apart for block groups ranked higher than that. The issue of block groups with only rents over $2,000 in both periods continues to prevail but, as mentioned earlier, there is no way around that given the data limitations. 
+As seen below, the dynamic metric corresponds a little better with with median rent change ranks - at least in the bottom right corner. The correspondence between the two seems best in the lowest ranked 3000 block groups but the correspondance falls apart for block groups ranked higher than that. The issue of block groups with all rents over $2,000 in both periods continues to prevail but, as mentioned earlier, there is no way around that given the data limitations. 
 
 ![rankScatterDynamic](/images/output_28_1.png)
 
 # Discussion
 
-Both static and dynamic metrices have merit in examining the rental market landscape. Although more subjective, the static metric can be tailored to target populations and rents of interest. For example, this metric *will* show block groups in which there were low-cost units that were lost whereas changes in the median gross rent will **not** show that. Moreover, the fact that my metric is somewhat indifferent to the fact that rents in a high cost area have increased from $2,500 to $3,000 may be a benefit because it filters out high cost areas which are not of interest to low-income households or researchers interested in loss of low-cost rental housing. 
+Both static and dynamic metrics have merit in examining the rental market landscape. Although more subjective, the static metric can be tailored to target populations and rents of interest. For example, this metric *will* show block groups in which there were low-cost units that were lost whereas changes in the median gross rent will **not** show that. Moreover, that my metric is somewhat indifferent to the fact that rents in a high cost areas have increased from $2,500 to $3,000 may be a benefit because it filters out high cost areas and only shows areas that experienced drastic changes in supply for low-cost rental housing.
 
-The dynamic metric for rental distribution changes is not as good at picking up the loss of low-cost rental housing because the base shifts for each neighborhood but it is much better at detecting rightward shifts in the rental distribution. If the researcher is interested in areas that are in high demand, the dynamic metric may be a better tool. 
+The dynamic metric for rental distribution changes is not as good at picking up the loss of low-cost rental housing because the base shifts for each neighborhood but it is much better at detecting rightward shifts in the rental distribution. If the researcher is interested in areas that are in high or low demand, the dynamic metric is a better tool. 
 
