@@ -6,13 +6,14 @@ categories: research
 ---
 
 
-# Introduction
+# Teaser
 
 In the map of LA County block groups below, areas that experienced large shifts away from lower-cost ($600-999) rental housing toward higher-cost ($1,500+) housing are orange and yellow. Block groups in which rental housing shifted in the other direction are dark blue and purple. For a more general assessment of areas in which the rental distribution shifted up or down, check out the [2nd map](#dynamic-rent-change-metric). 
 
 
 ![rentChange](/images/rentChangeMap.png)
 
+# Introduction
 
 Researchers and practictioners have a habit of looking at changes in median gross rents to detect areas that are becoming more expensive. That is a fair yet limited perspective if the researcher is interested in the loss of low-cost rental housing. The fact that rents in a high-cost neighborhood went up from a median $2,000 to a median of $3,000 a month is not particularly relevant for low-income households and low-cost housing. For a more relevant measure, I develop a metric that explicitly reflects losses of low-cost housing and shifts toward high-cost housing at the neighborhood level. I illustrate my metric by comparing rent distributions across two 5-year ACS survey periods 2009-2013 and 2013-2017 in Los Angeles County. 
 
