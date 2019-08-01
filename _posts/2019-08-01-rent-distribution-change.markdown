@@ -10,7 +10,6 @@ categories: research
 
 In the map of LA County block groups below, areas that experienced large shifts away from lower-cost ($600-999) rental housing toward higher-cost ($1,500+) housing are orange and yellow. Block groups in which rental housing shifted in the other direction are dark blue and purple. For a more general assessment of areas in which the rental distribution shifted up or down, check out the [2nd map](#dynamic-rent-change-metric). 
 
-
 ![rentChange](/images/rentChangeMap.png)
 
 # Introduction
