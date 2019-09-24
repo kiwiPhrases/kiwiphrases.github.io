@@ -292,7 +292,7 @@ def runQuantRegression(y,x,data,quant=.5):
     res = mod.fit(quant=.5)
     return(res)
 
-def runRegressions(y, xList, key_vars, data, specification_names=None, cov_type='HC0', pvalue=True):
+def runRegressions(y, xList, key_vars, data, specification_names=None, cov_type='HC0', pvalues=True):
     """
     y - dependent variable (string)
     xList - list of explanatory variable strings (list of Patsy compatible formulas)
