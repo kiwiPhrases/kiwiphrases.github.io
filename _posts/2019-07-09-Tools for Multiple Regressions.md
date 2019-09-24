@@ -292,7 +292,7 @@ def runQuantRegression(y,x,data,quant=.5):
     res = mod.fit(quant=.5)
     return(res)
 
-def runRegressions(y, xList, key_vars, data, specification_names=None, cov_type='HC0'):
+def runRegressions(y, xList, key_vars, data, specification_names=None, cov_type='HC0', pvalue=True):
     """
     y - dependent variable (string)
     xList - list of explanatory variable strings (list of Patsy compatible formulas)
@@ -326,8 +326,12 @@ def runRegressions(y, xList, key_vars, data, specification_names=None, cov_type=
         outDict[key] = {'nObs':regDict[key].nobs,'R^2 adj':regDict[key].rsquared_adj.round(3), 'cond. num':regDict[key].condition_number}
         
         # loop over variables of interest
-        for var in key_vars:
-            outDict[key][var] = "%.04f (%.03f)" %(regDict[key].params[var], regDict[key].pvalues[var])
+        if pvalues:
+            for var in key_vars:
+                outDict[key][var] = "%.04f (%.03f)" %(regDict[key].params[var], regDict[key].pvalues[var])
+        if pvalues == False:
+            outDict[key] = regDict[key].params.round(3).astype(str) + pd.cut(regDict[key].pvalues,bins=[0,.01,.05,.1,1], labels=['***','**','*','']).astype(str)
+            
         
     outdf =pd.DataFrame(outDict).transpose()
     outdf.index.name='specification'
