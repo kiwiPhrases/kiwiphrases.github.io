@@ -312,10 +312,17 @@ The one last thing (in the last column 'delta'), I test the impact of renter inc
 
 What's the take away from all this? First, if you read this far, thank you! Hm, what else:
 
-    - There's a lot that can be done in areas such as Cincinnati. As [Boeing](https://geoffboeing.com/2016/08/craigslist-rental-housing-insights/) and a few other uncirculated manuscripts already mention, moving low-income households to higher quality units is cheaper in areas with low rent spreads. Alternatively, moving higher-income renters into the ownership market can further narrow rents spreads in these cities and thus increase upward mobility among low-income households provided spatial socio-economic segregation does not change. 
-    - Returns probably won't be great on higher-end rental properties in metros with cheap housing though in this post, I do not consider costs which, in case of NY, LA, or SF, are not insubsantial.
-    - Houston has a very odd recent home-owner income distribution: it's almost uniform? #Texas
-    - Oh, KDEs do not seem to provide a great estimates of probability densities but that's a minor point. 
+
+    1. There's a lot that can be done in areas such as Cincinnati. As [Boeing](https://geoffboeing.com/2016/08/craigslist-rental-housing-insights/) and a few other uncirculated manuscripts already mention, moving low-income households to higher quality units is cheaper in areas with low rent spreads. Alternatively, moving higher-income renters into the ownership market can further narrow rents spreads in these cities and thus increase upward mobility among low-income households provided spatial socio-economic segregation does not change. 
+    
+    
+    2. Returns probably won't be great on higher-end rental properties in metros with cheap housing though in this post, I do not consider costs which, in case of NY, LA, or SF, are not insubsantial.
+    
+    
+    3. Houston has a very odd recent home-owner income distribution: it's almost uniform? #Texas
+    
+    
+    4. Oh, KDEs do not seem to provide a great estimates of probability densities but that's a minor point. 
 
 As a side note, in reading this, you may have thought - why is he using occupant income? After all, the landlord determines the rent not off of the occupant's income but off of the income distribution of the neighborhood. Wouldn't the log mean income of neighborhood residents be a more appropriate tool for this sort of analysis? Yes. Yes, it would but data limitations preclude it. I would need micro-data on rents and neighborhood income for each tenure type for each observed rent. Alas, short of restricted AHS data, no such data exist. 
 
