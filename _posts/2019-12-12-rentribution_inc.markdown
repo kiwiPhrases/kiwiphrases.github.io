@@ -57,37 +57,37 @@ For a numerical comparison, I integrate each of the KDE curves and compare the o
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
-      <th>mean</th>
-      <th>mean_overlap</th>
-      <th>spread</th>
-      <th>spread_overlap</th>
+      <th>dependent var:</th>
+      <th>log mean rent</th>
+      <th>log mean rent</th>
+      <th>log rent spread</th>
+      <th>log rent spread</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>mu_HINCP</th>
+      <th>log mean income</th>
       <td>0.7235 (0.000)</td>
       <td>0.6819 (0.000)</td>
       <td>0.0771 (0.100)</td>
       <td>0.0579 (0.177)</td>
     </tr>
     <tr>
-      <th>stdlog_HINCP</th>
+      <th>log income spread</th>
       <td>0.1799 (0.526)</td>
       <td>0.3206 (0.199)</td>
       <td>0.6043 (0.000)</td>
       <td>0.6693 (0.000)</td>
     </tr>
     <tr>
-      <th>overlap</th>
+      <th>distr, overlap</th>
       <td></td>
       <td>0.4917 (0.000)</td>
       <td></td>
       <td>0.2271 (0.002)</td>
     </tr>
     <tr>
-      <th>elasticity</th>
+      <th>supply elasticity</th>
       <td>-0.1495 (0.000)</td>
       <td>-0.1092 (0.000)</td>
       <td>-0.0432 (0.005)</td>
@@ -134,23 +134,23 @@ Do the above results hold any water or am I just fooling myself into believing m
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
-      <th>mu_pti</th>
-      <th>spread_pti</th>
-      <th>mean_ownerArea</th>
-      <th>spread_ownerArea</th>
+      <th>dependent var:</th>
+      <th>log mean rent</th>
+      <th>log rent spread</th>
+      <th>log mean rent</th>
+      <th>log rent spread</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>mu_HINCP</th>
+      <th>log mean income</th>
       <td>0.5342 (0.000)</td>
       <td>0.0150 (0.753)</td>
       <td>0.7232 (0.000)</td>
       <td>0.0770 (0.071)</td>
     </tr>
     <tr>
-      <th>stdlog_HINCP</th>
+      <th>log income spread</th>
       <td>0.0205 (0.923)</td>
       <td>0.5520 (0.000)</td>
       <td>0.3512 (0.144)</td>
@@ -171,7 +171,7 @@ Do the above results hold any water or am I just fooling myself into believing m
       <td>0.2932 (0.002)</td>
     </tr>
     <tr>
-      <th>elasticity</th>
+      <th>supply elasticity</th>
       <td>-0.0625 (0.013)</td>
       <td>-0.0147 (0.382)</td>
       <td>-0.0980 (0.000)</td>
@@ -218,17 +218,17 @@ On side note, I am implicitly assuming we are comparing a similar set of goods a
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
-      <th>mean_demogs</th>
-      <th>spread_demogs</th>
-      <th>rrent_mu</th>
-      <th>rrent_spread</th>
+      <th>outcome var</th>
+      <th>log mean rent</th>
+      <th>log rent spread</th>
+      <th>mean residual rent</th>
+      <th>residual rent spread</th>
       <th>delta</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>mu_HINCP</th>
+      <th>log mean income</th>
       <td>0.0808 (0.643)</td>
       <td>-0.0479 (0.696)</td>
       <td>0.0955 (0.698)</td>
@@ -236,7 +236,7 @@ On side note, I am implicitly assuming we are comparing a similar set of goods a
       <td>-0.1833 (0.371)</td>
     </tr>
     <tr>
-      <th>stdlog_HINCP</th>
+      <th>log rent spread</th>
       <td>0.3102 (0.188)</td>
       <td>0.5297 (0.002)</td>
       <td>3.2082 (0.000)</td>
@@ -244,7 +244,7 @@ On side note, I am implicitly assuming we are comparing a similar set of goods a
       <td>0.6265 (0.026)</td>
     </tr>
     <tr>
-      <th>overlap</th>
+      <th>distr. overlap</th>
       <td>0.2225 (0.032)</td>
       <td>0.1469 (0.043)</td>
       <td>0.5448 (0.191)</td>
@@ -252,7 +252,7 @@ On side note, I am implicitly assuming we are comparing a similar set of goods a
       <td>0.0882 (0.456)</td>
     </tr>
     <tr>
-      <th>elasticity</th>
+      <th>upply elasticity</th>
       <td>-0.0583 (0.007)</td>
       <td>-0.0012 (0.933)</td>
       <td>-0.0536 (0.527)</td>
