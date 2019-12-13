@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Rentribution Inc(ome)"
+title:  "Rentribution Inc(...ome)"
 date:   2019-12-12 5:55:00 -0700
 categories: research
 ---
