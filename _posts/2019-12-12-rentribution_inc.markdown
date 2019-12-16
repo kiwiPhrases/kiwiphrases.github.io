@@ -318,7 +318,7 @@ What's the take away from all this? First, if you read this far, thank you!
  Returns probably won't be great on higher-end rental properties in metros with cheap housing though in this post, I do not consider costs which, in case of NY, LA, or SF, are not insubsantial either. 
     
 
- Houston has a very odd recent home-owner income distribution: it's almost uniform. On a minor point, KDEs do not seem to provide great estimates of probability densities in that over the support, they don't typically integrate 1. 
+ Houston has a very odd new home-owner income distribution: it's almost uniform.
 
 As a side note, in reading this, you may have thought - why is he using occupant income? After all, the landlord determines the rent not off of the occupant's income but off of the income distribution of the neighborhood. Wouldn't the log mean income of neighborhood residents be a more appropriate tool for this sort of analysis? Yes. Yes, it would but data limitations preclude it. I would need micro-data on rents and neighborhood income for each tenure type for each observed rent. Alas, short of restricted AHS data, no such data exist. 
 
