@@ -60,6 +60,7 @@ For [data](#code-data-and-stata), I use the 1985-2011 bi-annual American Housing
       <th>high-tier rent change</th>
     </tr>
   </thead>
+  <tfoot><tr><td colspan="3">p-values in parentheses.</td></tr></tfoot>
   <tbody>
     <tr>
       <th>Intercept</th>
