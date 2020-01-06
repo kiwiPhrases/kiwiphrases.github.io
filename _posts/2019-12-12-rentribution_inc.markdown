@@ -315,7 +315,7 @@ What's the take away from all this? First, if you read this far, thank you!
 
  There's a lot that can be done in areas such as Cincinnati. As [Boeing](https://geoffboeing.com/2016/08/craigslist-rental-housing-insights/) and a few other uncirculated manuscripts already mention, moving low-income households to higher quality units is cheaper in areas with low rent spreads. Alternatively, moving higher-income renters into the ownership market can further narrow rents spreads in these cities and thus increase upward mobility among low-income households provided spatial socio-economic segregation does not change. 
     
- Returns probably won't be great on higher-end rental properties in metros with cheap housing though in this post, I do not consider costs which, in case of NY, LA, or SF, are not insubsantial either. 
+ In a city with in or out movers, landlords renting bear more risk in returns as their consumer base may permanently leave the market to own if economic conditions are appropriate. 
     
 
  Houston has a very odd new home-owner income distribution: it's almost uniform.
