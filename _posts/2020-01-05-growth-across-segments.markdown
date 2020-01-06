@@ -46,13 +46,7 @@ For [data](#code-data-and-stata), I use the 1985-2011 bi-annual American Housing
     }
 </style>
 <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: middle;">
-      <th></th>
-      <th>outcome variable</th>
-      <th></th>
-    </tr>
-  </thead>
+  <thead><tr><td colspan="3">dependent variable.</td></tr></thead>
   <thead>
     <tr style="text-align: right;">
       <th></th>
