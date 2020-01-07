@@ -104,9 +104,9 @@ For [data](#code-data-and-stata), I use the 1985-2011 bi-annual American Housing
 </div>
 
 
-Results concur with expectations outlined [above](#quick-theory). In the table above, in the rent change column, I regress bi-annual changes in real rents on a higher-tier unit dummy as defined in [empirical section](#empirical-approach). The intercept suggests that market rents for lower-tier units grew at an average of 7% every two years and that higher-tier unit rents grew at 2% (or 5 percentage points less). This confirms the expectation that higher-tier unit rents grow at a slower pace than higher-tier units. 
+Results concur with expectations outlined [above](#quick-theory). In the table above, in the rent change column, I regress bi-annual changes in real rents on a higher-tier unit dummy as defined in [empirical section](#empirical-approach). The intercept suggests that market rents for lower-tier units grew at an average of 7% every two years and that higher-tier unit rents grew at 2% (or 2 percentage points less). This confirms the expectation that higher-tier unit rents grow at a slower pace than higher-tier units. 
 
-In the high-tier rent change column, I regress rent changes of units that started in the top 25% on the price-to-income (pti) ratio. Again, as expected, in years that the ownership market is more inaccessible, rents grow faster suggesting competition between the ownership and high-tier rental market. The same does not hold when I regress on changes among units in the bottom 75%. 
+In the high-tier rent change column, I regress *nominal* rent changes of units that started in the top 25% on the price-to-income (pti) ratio. Again, as expected, in years that the ownership market is more inaccessible, rents grow faster suggesting competition between the ownership and high-tier rental market. The same does not hold when I regress on changes among units in the bottom 75% (not shown). 
 
 # Discussion
 
