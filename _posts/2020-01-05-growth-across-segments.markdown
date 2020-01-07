@@ -13,7 +13,7 @@ Any statement mentioning a single growth rate or unaffordability index for all r
 
 ![annualRents](/images/annualRents.png)
 
-The figure above shows us that at least among the units included in this 1985-2011 AHS panel, real rent growth has not been uniform over time. Real rents among lower-tier units grew faster than the others up through the 90s but then leveled out to a slope similar to the other tiers. We also observe that rents in the highest tier are also most volatile. 
+The figure above shows us that at least among the units included in this 1985-2011 AHS panel, real rent growth has not been uniform over time. Real rents among lower-tier units grew faster than the others up through the 90s but then leveled out to a slope similar to the other tiers. We also observe that rents in the highest tier seem to be most volatile. 
 
 How come we see such large differences in rent growths across the market quality segment? The set of reasons can be quite large. From differential depreciation, construction, and filtering rates to gentrification and types of management. In this post, I focus on the competition between the rental and ownership market. Namely, households residing in the high-tier rental market may and can opt to buy property thus exiting the rental market while residents in low-tier housing are less likely to have such exit privileges. As a result, landlords in the high-tier compete with the ownership market while low-tier landlords only compete amongst themselves. Empirical results support this hypothesis since in times of cheaper homes relative to income, growth rates in high-tier rental are slower while growth rates in the low-tier market are higher. 
 
