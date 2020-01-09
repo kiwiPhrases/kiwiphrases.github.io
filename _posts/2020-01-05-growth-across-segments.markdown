@@ -9,13 +9,13 @@ categories: research
 
 ![rentGrowth](/images/rrentChange.png)
 
-Any statement mentioning a single growth rate or unaffordability index for all rental units is bound to miss the nuance that not all segments of the rental market grow at an equal pace. As I discuss below, rents for the higher-tier rental market should grow slower than the rest of the market while rents in the low-tier market should grow the fastest. Empirical assessment of rent growth using a 1985-2011 panel of American Housing Survey data confirms this. The real-rent bi-annual growth of the mid-tier rental market is about 5% but in the high-tier it's only 2.7% while in the low tier, it's 7.1%. Note, these figures look high because they are bi-annual rates. The annual growth rates are approximately half of the bi-annual rates (2.5%, 1.35%, and 3.55% respectively) which are more of the numbers we are used to seeing. 
+Any statement mentioning a single growth rate or unaffordability index for all rental units is bound to miss the nuance that not all segments of the rental market grow at an equal pace. As I discuss below, rents for the higher-tier rental market should grow slower than the rest of the market while rents in the low-tier market should grow the fastest. Empirical assessment of rent growth using a 1985-2011 panel of American Housing Survey data confirms this. The real-rent bi-annual growth of the mid-tier rental market is about 2% but in the high-tier it's only -0.003 while in the low tier, it's 4.1%. Note, these figures look high because they are bi-annual rates. The annual growth rates are approximately half of the bi-annual rates or 1% for mid-tier, ~0% high-tier, and 2.05% for low-tier. 
 
 ![annualRents](/images/annualRents.png)
 
 The figure above shows us that at least among the units included in this 1985-2011 AHS panel, real rent growth has not been uniform over time. Real rents among lower-tier units grew faster than the others up through the 90s but then leveled out to a slope similar to the other tiers. We also observe that rents in the highest tier seem to be most volatile. 
 
-How come we see such large differences in rent growths across the market quality segment? The set of reasons can be quite large. From differential depreciation, construction, and filtering rates to gentrification and types of management. In this post, I focus on the competition between the rental and ownership market. Namely, households residing in the high-tier rental market may and can opt to buy property thus exiting the rental market while residents in low-tier housing are less likely to have such exit privileges. As a result, landlords in the high-tier compete with the ownership market while low-tier landlords only compete amongst themselves. Empirical results support this hypothesis since in times of cheaper homes relative to income, growth rates in high-tier rental are slower while growth rates in the low-tier market are higher. 
+How come we see such large differences in rent growths across the market quality segment? The set of reasons can be quite large. From differential depreciation, construction, and filtering rates to gentrification and types of facility management. In this post, I focus on the competition between the rental and ownership market. Namely, households residing in the high-tier rental market may and can opt to buy property thus exiting the rental market while residents in low-tier housing are less likely to have such exit privileges. As a result, landlords in the high-tier compete with the ownership market while low-tier landlords only compete amongst themselves. Empirical results support this hypothesis since in times of cheaper homes relative to income, growth rates in high-tier rental are slower while growth rates in the low-tier market are higher. 
 
 
 # Quick theory
@@ -27,7 +27,7 @@ If the upper segment of the housing rental market competes with the ownership ma
 I leverage the age-old repeat-sale approach to testing the above hypotheses except, instead of looking at changes in home market price, I look at the change in the unit's real rent over time. Units that start in a relatively low-tier should observe faster growth in rents than units in the upper tier. Assuming vertical differentiation among rental units, I define lower-tier units as any unit whose rent in the first year of the unit's observation rent was in the bottom 75% of rents in that year. Conversely, a high-tier unit is one whose rent started in the top 25% of metro rents. Regressing year-to-year changes in unit rents on a constant and a dummy on high-tier units should show that relative to the constant, high-tier unit rents, on average, grow at a slower rate than lower-tier units. 
 
 
-Employing a similar strategy but on the sub-sample of units by lower and upper tier, I also regression percent change in unit rents on home-ownership accessibility. I measure home-ownership accessibility as the ratio of median annual house prices to the 75th percentile of occupant renter incomes in the same year. If the price-to-income (pti) ratio is large then the gap between household incomes and home prices is large suggesting that the home-ownership market is more difficult to enter. If the housing market is less accessible then rents in the higher-tier should grow faster so the coefficient on pti should be positive. 
+Employing a similar strategy but on the sub-sample of units by lower and upper tier, I also regress percent change in unit rents on home-ownership accessibility. I measure home-ownership accessibility as the interaction between mortgage interest rates and the ratio of median annual house prices to the 75th percentile of occupant renter incomes in the same year. If the price-to-income (pti) ratio is large then the gap between household incomes and home prices is large suggesting that the home-ownership market is more difficult to enter. If the housing market is less accessible then rents in the higher-tier should grow faster so the coefficient on pti should be positive. 
 
 
 For [data](#code-data-and-stata), I use the 1985-2011 bi-annual American Housing Survey (AHS) panel on units assembled by Rosenthal for his 2014 AER paper on filtering. The data are meant to be nationally representative so include units from over 147 metropolitan areas (SMSAs). To control for this, I include a SMSA fixed effect in the regressions. The repeat-sale approach typically uses change of ownership in houses to register changes in home values but since rents can change without change of occupant, I examine all bi-annual changes in rents and include a dummy for whether the unit retains its previous tenant or not. Per usual, percent change in rents is approximated by the log ratio of a unit's rent in years t+2 and t. The price to income ratio is estimated using the home values of home owners who have lived in their dwelling for less than 10 years and 75th percentile of renter occupant incomes. All rents have been deflated by the US average all-item CPI (though all-item less shelter is a more standard approach). I exclude units with bi-annual growth over 100%. 
@@ -61,33 +61,33 @@ For [data](#code-data-and-stata), I use the 1985-2011 bi-annual American Housing
    <tbody>
     <tr>
       <th>Intercept</th>
-      <td>0.049 (0.006)</td>
-      <td>0.055 (0.080)</td>
+      <td>0.020 (0.254)</td>
+      <td>-0.019 (0.597)</td>
     </tr>
     <tr>
       <th>higher-tier</th>
-      <td>-0.022 (0.000)</td>
+      <td>-0.023 (0.000)</td>
       <td></td>
     </tr>
     <tr>
       <th>low-tier</th>
-      <td>0.022 (0.000)</td>
+      <td>0.021 (0.000)</td>
       <td></td>
     </tr>
     <tr>
-      <th>pti</th>
+      <th>r:pti_top</th>
       <td></td>
-      <td>0.002 (0.013)</td>
+      <td>0.035 (0.520)</td>
     </tr>
     <tr>
       <th>same HH</th>
-      <td>-0.019 (0.000)</td>
-      <td>-0.018 (0.000)</td>
+      <td>-0.014 (0.000)</td>
+      <td>-0.005 (0.064)</td>
     </tr>
     <tr>
       <th>nObs</th>
       <td>145163</td>
-      <td>37642</td>
+      <td>37111</td>
     </tr>
     <tr>
       <th>R^2 adj</th>
@@ -96,30 +96,28 @@ For [data](#code-data-and-stata), I use the 1985-2011 bi-annual American Housing
     </tr>
     <tr>
       <th>condNum</th>
-      <td>435</td>
-      <td>1752</td>
+      <td>425</td>
+      <td>1743</td>
     </tr>
   </tbody>
 </table>
 </div>
 
 
-Results concur with expectations outlined [above](#quick-theory). In the table above, in the rent change column, I regress bi-annual changes in real rents on a higher-tier unit dummy as defined in [empirical section](#empirical-approach). The intercept suggests that market rents for lower-tier units grew at an average of 7% every two years and that higher-tier unit rents grew at 2% (or 2 percentage points less). This confirms the expectation that higher-tier unit rents grow at a slower pace than higher-tier units. 
+Results concur with expectations outlined [above](#quick-theory). In the 'rent change' column of the above table, I regress bi-annual changes in real rents on a low-tier and high-tier unit dummies as defined in [empirical section](#empirical-approach). The intercept suggests that mid-tier market rents grew at an average 2% every two years though this estimate is not distinguishable from 0 even at the 10% level.  The coefficient on high-tier units implies that real rents  grew bi-annually by -.3% (or 2.3pp less than mid-tier) which is the smallest growth rate. Conversely, low-tier units grew by 4.1% every two years suggesting that rents in that segment grew fastest. This confirms the expectation that high-tier unit rents grow at a slower pace than low-tier units. 
 
-In the high-tier rent change column, I regress *nominal* rent changes of units that started in the top 25% on the price-to-income (pti) ratio. Again, as expected, in years that the ownership market is more inaccessible, rents grow faster suggesting competition between the ownership and high-tier rental market. The same does not hold when I regress on changes among units in the bottom 75% (not shown). 
+In the high-tier rent change column, I regress real rent changes of units that started in the top 25% on the price-to-income (pti) ratio interacted with the average annual mortgage interest rates. The positive coefficient on r:pti_top implies that years in which the ownership market is more inaccessible, rents grow faster suggesting competition between the ownership and high-tier rental market. The same does not hold when I regress rent changes among units in the bottom 25% (not shown). 
 
 # Discussion
 
-A potential concern is regression to the mean. Namely, as time goes on, high-tier units converge in quality through deterioration and replacement toward lower-tier units so rents should also converge toward the average. This will bias the coefficient on higher-tier units downward. Conversely, low-tier units deemed no longer qualified to be occupied by either the market or officials fall out. This unit survival is likely lends to an upward bias among coefficents on low-tier units.   
+A potential concern is regression to the mean. Namely, as time goes on, high-tier units converge in quality through deterioration and replacement toward lower-tier units so rents should also converge toward the average. This will bias the coefficient on higher-tier units downward. Conversely, low-tier units deemed no longer qualified to be occupied by either the market or officials fall out. This unit survival is likely lends to an upward bias among coefficents on low-tier units. However, estimates only on units that are present from the beginning of the sample (1985 & 1987) are nigh identical to estimates on all units which suggests that unit falling in and out does not affect the estimates. 
 
 
-Renter property prices do not remain dormant through a property's lifetime. If the property changes hands and home prices are going up, ie pti is growing, then the rental property will also cost more. In the data, I observe neither change of ownership nor changes in the property's value which may endogenize pti. 
+The relationship between ownership markets and high-tier rents is somewhat endogenized by the fact that cities are not closed. A more rigorous test between home-ownership access and rents would involve estimates of the demand for the city's housing through something like Bartik Shocks. 
 
 
-One rather obvious critique is that lower-tier rents grow off a smaller base value so they will inherently grow at a faster pace. Normalizing the base rent by a unit's initial rent wouldn't change percent changes so I am not sure how to get around this concern. 
+There are a few more caveats. Renter property prices do not remain dormant through a property's lifetime. If the property changes hands and home prices are going up, ie pti is growing, then the rental property will also cost more. In the data, I observe neither change of ownership nor changes in the property's value which may endogenize pti. A key assumption in all repeat-sales models is that both unit and neighborhood characteristics remain constant across time. This is unlikely to be the case. Nor are the valuations of these characteristics are likely to remain constant.
 
-
-A key assumption in all repeat-sales models is that both unit and neighborhood characteristics remain constant across time. This is unlikely to be the case. Nor are the valuations of these characteristics are likely to remain constant.
 
 # Code Data and STATA
 
