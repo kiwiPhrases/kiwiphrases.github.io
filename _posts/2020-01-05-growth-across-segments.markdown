@@ -9,7 +9,7 @@ categories: research
 
 ![rentGrowth](/images/rrentChange.png)
 
-Any statement mentioning a single growth rate or unaffordability index for all rental units is bound to miss the nuance that not all segments of the rental market grow at an equal pace. As I discuss below, rents for the higher-tier rental market should grow slower than the rest of the market while rents in the low-tier market should grow the fastest. Empirical assessment of rent growth using a 1985-2011 panel of American Housing Survey data confirms this. The real-rent bi-annual growth of the mid-tier rental market is about 2% but in the high-tier it's only -0.003 while in the low tier, it's 4.1%. Note, these figures look high because they are bi-annual rates. The annual growth rates are approximately half of the bi-annual rates or 1% for mid-tier, ~0% high-tier, and 2.05% for low-tier. 
+Any statement mentioning a single growth rate or unaffordability index for all rental units is bound to miss the nuance that not all segments of the rental market grow at an equal pace. As I discuss below, rents for the higher-tier rental market should grow slower than the rest of the market while rents in the low-tier market should grow the fastest. Empirical assessment of rent growth using a 1985-2011 panel of American Housing Survey data confirms this. The real-rent bi-annual growth of the mid-tier rental market is about 2% but in the high-tier it's only -0.3% while in the low tier, it's 4.1%. Note, these rates are bi-annual rates. The annual growth rates are approximately half of the bi-annual rates or 1% for mid-tier, ~0% high-tier, and 2.05% for low-tier. 
 
 ![annualRents](/images/annualRents.png)
 
