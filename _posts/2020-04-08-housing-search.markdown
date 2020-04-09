@@ -5,17 +5,17 @@ date:   2020-04-08 5:55:00 -0700
 categories: research
 ---
 
-### Introduction 
+## Introduction 
 
-Recently, I reviewed an article that boldly claimed that the internet access and use gap between low-income and high-income households has practically closed and that low-income households use online tools to find housing at the same rate as higher-income households. They did not provide any direct evidence of this beside an allusion to some American Community Survey (ACS) data. Although I cannot assess the first claim, the second claim can be roughly examined using the 2015 and 2017 American Housing Survey (AHS) data. In brief, data from the AHS suggest that a household's socio-economic status still negatively correlates with the use of online resources to find housing.
-
-
-For households who moved within 2 years of the survey, the AHS collects data on how households found the unit they currently inhabit and provide 7 different search technologies including 1) family, friends, etc 2) rent sign, 3) newspaper 4), real-estate agent, 5) internet, 6) apartment rental agency listing ,and 7) other. I examine whether low-income households employ the internet to find housing less two simple ways. First, I simply tabulate the share of households in each income quantile that used a particular search technology. Second, I run a logit model on whether a household used the internet to find housing against a number of household characteristics including income. 
+Recently, I reviewed an article that boldly claimed that internet access and use gap between low-income and high-income households has practically closed and that low-income households use online tools to find housing at the same rate as higher-income households. They did not provide any direct evidence of this beside an allusion to some American Community Survey (ACS) data. Although I cannot assess the first claim, the second claim can be roughly examined using the 2015 and 2017 American Housing Survey (AHS) data. In brief, data from the AHS suggest that a household's socio-economic status still negatively correlates with the use of online resources to find housing.
 
 
-### Results
+For households who moved within 2 years of the survey, the AHS collects data on how households found the unit they currently inhabit and provide 7 different search technologies including 1) family, friends, etc 2) rent sign, 3) newspaper 4), real-estate agent, 5) internet, 6) apartment rental agency listing ,and 7) other. I examine whether fewer low-income households employ the internet to find housing using two simple ways. First, I tabulate the share of households in each income quaitile that use a particular search technology. Second, I run a logit model on whether a household used the internet to find housing against a number of household characteristics including income. 
 
-## Search technology by income
+
+## Results
+
+# Search technology by income
 
 I divided renter households into income quantiles with quintile 1 being the lowest and tabulated the share of households in each income bin using each of the search technologies. The results can be observed in the two figures below. As a check to understanding, the bright pink bars should add up to 1 across the technologies. There are many interesting patterns we can observe in the plots but let's focus on the question at hand. 
 
@@ -26,7 +26,7 @@ While 42% of households in the top quintile used the internet to find their most
 
 ![searchTech2017](/images/searchTech_2017.png)
 
-## Logistic regression
+# Logistic regression
 
 I also a logistic regression on whether the household used online resources to find household or not. The control variables include things such as the household's log-income(logincome), whether it's a female-headed household(femaleHH), whether the household's head has a college or higher education (collegeOrMore), whether it's married (marriedHH), whether it's a black or white household, the number of adults in the household (NUMADULTS), and a dummy for each of the MSAs. I could also interact log-income with household age to better control for household wealth and do further controls but we'll keep it simple here. 
 
@@ -113,7 +113,7 @@ Every coefficient behaves in the expected manner. The positive coefficients on t
 </div>
 </div>
 
-### Discussion
+## Discussion
 
 Although the above analysis is by no means rigorous, the stark differences in use of the internet to find housing across the income spectrum suggests that it is highly unlikely that the use of the internet between low and high income households is small or non-existent. 
 
