@@ -5,7 +5,7 @@ date:   2020-04-08 5:55:00 -0700
 categories: research
 ---
 
-# Introduction 
+### Introduction 
 
 Recently, I reviewed an article that boldly claimed that the internet access and use gap between low-income and high-income households has practically closed and that low-income households use online tools to find housing at the same rate as higher-income households. They did not provide any direct evidence of this beside an allusion to some American Community Survey (ACS) data. Although I cannot assess the first claim, the second claim can be roughly examined using the 2015 and 2017 American Housing Survey (AHS) data. In brief, data from the AHS suggest that a household's socio-economic status still negatively correlates with the use of online resources to find housing.
 
@@ -13,7 +13,7 @@ Recently, I reviewed an article that boldly claimed that the internet access and
 For households who moved within 2 years of the survey, the AHS collects data on how households found the unit they currently inhabit and provide 7 different search technologies including 1) family, friends, etc 2) rent sign, 3) newspaper 4), real-estate agent, 5) internet, 6) apartment rental agency listing ,and 7) other. I examine whether low-income households employ the internet to find housing less two simple ways. First, I simply tabulate the share of households in each income quantile that used a particular search technology. Second, I run a logit model on whether a household used the internet to find housing against a number of household characteristics including income. 
 
 
-# Results
+### Results
 
 ## Search technology by income
 
@@ -112,7 +112,7 @@ Every coefficient behaves in the expected manner. The positive coefficients on t
 </div>
 </div>
 
-# Discussion
+### Discussion
 
 Although the above analysis is by no means rigorous, the stark differences in use of the internet to find housing across the income spectrum suggests that it is highly unlikely that the use of the internet between low and high income households is small or non-existent. 
 
