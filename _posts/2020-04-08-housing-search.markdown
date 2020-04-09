@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Rentribution Inc(...ome)"
+title:  "Housing search across incomes"
 date:   2020-04-08 5:55:00 -0700
 categories: research
 ---
