@@ -56,6 +56,7 @@ Every coefficient behaves in the expected manner. The positive coefficients on t
       <th>2017</th>
     </tr>
   </thead>
+  <tfoot><tr><td colspan="3">p-values in parentheses.</td></tr></tfoot>
   <tbody>
     <tr>
       <th>logincome</th>
