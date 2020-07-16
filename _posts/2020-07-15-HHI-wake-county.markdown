@@ -36,10 +36,12 @@ What I found particularly striking about Wake County is how competitive the owne
 <script type="application/htmlwidget-sizing" data-for="htmlwidget-16075cdfc59addf15861">{"viewer":{"width":"80%","height":300,"padding":0,"fill":false},"browser":{"width":"80%","height":300,"padding":0,"fill":false}}</script>
 </body>
 
+
+
 ## Underhood
  There were some data losses in the merger process and, importantly, we must remember that regardless of the source for your real-estate data, there are bound to be a fair share of errors in the data resulting in observation losses. Whether these losses are random enough to retain near-population representation is its own exercise  and I won't delve into. Let's treat these as best-we-can-do estimations of ownership shares. Finally, it is important to note that ownership shares are always underestimated due to the way property ownership is structured (ie one owner, multiple LLCs). 
 
-Thanks to the discovery of [Leaflet](https://leafletjs.com/), I aim to upgrade my maps to interactive plots so you can examine the results a bit closer. This one is the first one published on this blog (yay!). To see the code used to create these maps, per usual, I posted the python and R files on GitHub. 
+Interactive maps are created with the help of [Leaflet](https://leafletjs.com/). To see the code used to create these maps, per usual, I posted the python and R files on [GitHub](https://github.com/kiwiPhrases/blognotebooks). 
 
 
 
