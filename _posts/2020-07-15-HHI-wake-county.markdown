@@ -6,11 +6,11 @@ categories: research
 ---
 
 ## Introduction 
-I have been compiling ownership shares for various metropolitan areas throughout the US and this is just another mid-step in the data's demonstration. This time, I am posting ownership shares for Wake County, NC. The assessor data that include the number of units, land-use, and owners can be found on the Wake County assessor [page](http://www.wakegov.com/tax/realestate/redatafile/Pages/default.aspx). Since the assessor data were not geocoded (ie just address, no lat/lon data), I paired it with geocoded parcels from [NC onemap](https://services.nconemap.gov/ncom-parcels-dd.htm). There were some data losses in the merger process and, importantly, we must remember that regardless of your real-estate data, there are bound to be a fair share of errors in the data resulting in observation losses. Whether these losses are random enough to retain near-population representation is its own exercise I won't delve into so lets treat these as best-we-can-do estimations of ownership shares. Finally, it is important to note that ownership shares are always underestimated due to the way property ownership is structured (ie one owner, multiple LLCs). 
+I have been compiling ownership shares and Herfindalh-Herschmann Indexes(**HHIs**) for various metropolitan areas throughout the US and this time, I am posting ownership shares for **Wake County, NC** at the **Census Block Group level**. To compile ownership shares, I use assessor data that for each parcel in Wake County includes the parcel's number of units, land-use, and owner. The data are sourced from the Wake County assessor [page](http://www.wakegov.com/tax/realestate/redatafile/Pages/default.aspx). Since the assessor data were not geocoded (ie just address, no lat/lon data), I paired it with geocoded parcels from [NC onemap](https://services.nconemap.gov/ncom-parcels-dd.htm).
 
-What I found particularly striking about Wake County is how competitive the ownership structure is. Comparing to Milwaukee or Los Angeles County, Wake County has virtually no neighborhoods in which a single owner dominates the area. I don't have data on Durham and Chapel Hill at the moment but it would be interesting to see how Duke and UNC areas compare. Nonetheless, it is almost certain that if we see any funk in rents and the like in Wake County, it is not due to the residential ownership structure. 
+What I found particularly striking about Wake County is how competitive the ownership structure is. Compared to Milwaukee or Los Angeles County, Wake County has virtually no neighborhoods in which a single owner dominates the area. I don't have data on Durham and Chapel Hill at the moment but it would be interesting to see how Duke and UNC areas compare. Nonetheless, it is almost certain that if we see any funk in rents or the like in Wake County, it is probably not due to the residential ownership structure. 
 
-## The map
+## Map of Wake County HHIs at Block Group Level
 <head>
 <meta charset="utf-8" />
 <title>leaflet</title>
@@ -37,6 +37,8 @@ What I found particularly striking about Wake County is how competitive the owne
 </body>
 
 ## Underhood
+ There were some data losses in the merger process and, importantly, we must remember that regardless of the source for your real-estate data, there are bound to be a fair share of errors in the data resulting in observation losses. Whether these losses are random enough to retain near-population representation is its own exercise  and I won't delve into. Let's treat these as best-we-can-do estimations of ownership shares. Finally, it is important to note that ownership shares are always underestimated due to the way property ownership is structured (ie one owner, multiple LLCs). 
+
 Thanks to the discovery of [Leaflet](https://leafletjs.com/), I aim to upgrade my maps to interactive plots so you can examine the results a bit closer. This one is the first one published on this blog (yay!). To see the code used to create these maps, per usual, I posted the python and R files on GitHub. 
 
 
