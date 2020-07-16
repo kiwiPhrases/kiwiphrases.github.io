@@ -11,6 +11,9 @@ I have been compiling ownership shares and Herfindalh-Herschmann Indexes(**HHIs*
 What I found particularly striking about Wake County is how competitive the ownership structure is. Compared to Milwaukee or Los Angeles County, Wake County has virtually no neighborhoods in which a single owner dominates the area. I don't have data on Durham and Chapel Hill at the moment but it would be interesting to see how Duke and UNC areas compare. Nonetheless, it is almost certain that if we see any funk in rents or the like in Wake County, it is probably not due to the residential ownership structure. 
 
 ## Map of Wake County HHIs at Block Group Level
+
+If you click on individual block groups, there'll be some additional details displayed. 
+
 <head>
 <meta charset="utf-8" />
 <title>leaflet</title>
