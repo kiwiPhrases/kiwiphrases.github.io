@@ -5,8 +5,6 @@ date:   2020-09-09 5:55:00 -0700
 categories: research
 ---
 
-<p><img style="float: left;" src="/images/drinking.png" alt="drinkingcylists" width="300"></p>
-
 ![drinkingcyclists](/images/drinking.png)
 
 
