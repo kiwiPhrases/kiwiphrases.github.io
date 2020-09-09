@@ -19,7 +19,7 @@ By most measures, this summer's climate was indeed indifferent between weekdays 
 
 ![weatherbarplot](/images/weatherbarplot.png)
 
-In the below plot, I visualize the average maximum temperature for each week of the summer but I compute means separately for weekdays and weekends. Weeks 18 through 26, we see that only on one weekend was the weekend average higher than the weekday averages. On week 27, the pattern flips. **80%** of weekends in week 27-36 had weekend temperatures higher than the weekday average. 
+The above doens't seem to be time indifferent though. In the below plot, I visualize the average maximum temperature for each summer week with means computed separately for weekdays and weekends. Weeks 18 through 26, we see that only on one weekend was the weekend average higher than the weekday averages. On week 27, the pattern flips. **80%** of weekends in week 27-36 had weekend temperatures higher than the weekday average. 
 
 ![weeklytempmeans](/images/weeklytempaverages.png)
 
