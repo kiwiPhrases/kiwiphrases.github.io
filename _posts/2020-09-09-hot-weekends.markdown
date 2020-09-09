@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Are weekends hotter than weekdays?  in LA?"
+title:  "Are weekends hotter than weekdays in LA?"
 date:   2020-09-09 5:55:00 -0700
 categories: research
 ---
