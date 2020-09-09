@@ -5,8 +5,10 @@ date:   2020-09-09 5:55:00 -0700
 categories: research
 ---
 
+<p><img style="float: left;" src="/images/drinking.png" alt="drinkingcylists" width="300"></p>
 
 ![drinkingcyclists](/images/drinking.png)
+
 
 From BLM to the elections, this 2020 summer has been notable for a myriad of reasons but let me discuss one that most of you were probably the least worried about: weekend temps. 
 
