@@ -23,13 +23,13 @@ The above doens't seem to be time indifferent though. In the below plot, I visua
 
 ![weeklytempmeans](/images/weeklytempaverages.png)
 
-An alterantive view can be seen in the plot below. When we plot the entire summer then the average day-of-week temperatures are similar between weekdays and weekends (Left plot) but when we plot only week 27 and up (Right plot), the difference between weekday averages and weekend averages is fairly large and weekend averages are much higher. This is suggestive that in the 2nd part of the summer, weekends were, on average, considerably (3-10 degrees) warmer than weekdays. 
+An alternative view can be seen in the plot below. When we plot the entire summer then the average day-of-week temperatures are similar between weekdays and weekends (Left plot) but when we plot only week 27 on (Right plot), the difference between weekday and weekend averages becomes larger. This is suggestive that in the 2nd part of the summer, weekends were, on average, considerably (3-10 degrees) warmer than weekdays. 
 
 ![weekdaytempmeans](/images/weekdaytempmeans.png)
 
 # Conclusion
 
-How sensitive is the result to the choice of summer midpoint and choice of mean versus median? As can be seen in the 1st column of the table below, mean max temperature results are not particularly sensitive to the choice of summer mid-point. Whether I shift the midpoint by +/-2 weeks still suggests that weekends tended to be hotter than weekdays though week 27 does seem to be a convenient maximizer. Interestingly, when I use the median maximum temp instead of the mean then the weekday median temps are higher and so it no longer seems that so many weekends were warmer than weekends. *Note*: in case of weekends, medians and means are the same. 
+How sensitive is the result to the choice of summer midpoint and choice of mean versus median? As can be seen in the 1st column of the table below, mean max temperature results are not particularly sensitive to the choice of summer mid-point. Whether I shift the midpoint by +/-2 weeks still suggests that weekends tended to be hotter than weekdays though week 27 does seem to be a convenient maximizer. Interestingly, when I use the median maximum temp instead of the mean then the weekday averagas get higher and so it no longer seems that so many weekends were warmer than weekends. *Note*: in case of weekends, medians and means are the same. 
 
 <table border="1" class="dataframe">
   <thead>
@@ -73,7 +73,7 @@ How sensitive is the result to the choice of summer midpoint and choice of mean 
   </tbody>
 </table>
 
-But perhaps the difference that the means and medians make also points to why I may have thought that weekends are hotter than weekdays. When latter-summer weekends were warmer than weekdays then the weekends were *much* hotter than the weekday means which may have made the difference particularly salient. Alternatively, in the latter part of the summer, the coolest part of the week also coincided with the time we are making our cycling plans (monday-tuesday) so the difference between the weekend and early week temps was particularly large. Were we making our plans on Thursday or Friday, we may not have perceived weekend to be that much hotter than weekdays. 
+But perhaps the difference that the means and medians make also points to why I may have thought that weekends are hotter than weekdays. When latter-summer weekends were warmer than weekdays then the weekends were *much* hotter than the weekday means which may have made the difference particularly salient. Alternatively, in the latter part of the summer, the coolest part of the week also coincided with the time we are making our cycling plans (monday-tuesday) so the difference between the weekend and early week temps was particularly large. Were we making our plans on Thursday or Friday, we may not have perceived weekends to be that much hotter than weekdays. 
 
 
-I suppose on a modeling note, daily temps are often modeled in some cos+sin format because weather exudes cyclicality. It's possible that in the latter part of the summer, these cycles simply synced up with the weeks, thus resulting in these strange patterns. 
+I suppose on a modeling note, daily temps are often modeled as some some cos+sin function because weather exudes cyclicality. It's possible that in the latter part of the summer, these cycles simply synced up with the weeks, thus resulting in these strange patterns. 
