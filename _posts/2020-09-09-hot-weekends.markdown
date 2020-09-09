@@ -8,7 +8,7 @@ categories: research
 
 # Are weekends hotter than weekdays? 
 
-![drinnkingcyclists](/drinking.png)
+![drinkingcyclists](/drinking.png)
 
 From BLM to the elections, this 2020 summer has been notable for a myriad of reasons but let me discuss one that most of you were probably the least worried about: weekend temps. 
 
@@ -30,6 +30,6 @@ An alterantive view can be seen in the plot below. When we plot the entire summe
 
 How sensitive is the result to the choice of summer midpoint and choice of mean versus median? As can be seen in the 1st column of the table below, mean max temperature results are not particularly sensitive to the choice of summer mid-point. Whether I shift the midpoint by +/-2 weeks still suggests that weekends tended to be hotter than weekdays though week 27 does seem to be a convenient maximizer. Interestingly, when I use the median maximum temp instead of the mean then the weekday median temps are higher and so it no longer seems that so many weekends were warmer than weekends. *Note*: in case of weekends, medians and means are the same. 
 
-<table border="1" class="dataframe">\n  <thead>\n    <tr style="text-align: right;">\n      <th></th>\n      <th>mean</th>\n      <th>median</th>\n    </tr>\n    <tr>\n      <th>weeks from median week</th>\n      <th></th>\n      <th></th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>-2</th>\n      <td>0.67</td>\n      <td>0.50</td>\n    </tr>\n    <tr>\n      <th>-1</th>\n      <td>0.73</td>\n      <td>0.55</td>\n    </tr>\n    <tr>\n      <th>0</th>\n      <td>0.80</td>\n      <td>0.60</td>\n    </tr>\n    <tr>\n      <th>1</th>\n      <td>0.78</td>\n      <td>0.56</td>\n    </tr>\n    <tr>\n      <th>2</th>\n      <td>0.75</td>\n      <td>0.50</td>\n    </tr>\n  </tbody>\n</table>
+<table border="1" class="dataframe">\n  <thead>\n    <tr style="text-align: right;">\n      <th></th>\n      <th>mean temps</th>\n      <th>median temps</th>\n    </tr>\n    <tr>\n      <th>weeks from median week</th>\n      <th></th>\n      <th></th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>-2</th>\n      <td>0.67</td>\n      <td>0.50</td>\n    </tr>\n    <tr>\n      <th>-1</th>\n      <td>0.73</td>\n      <td>0.55</td>\n    </tr>\n    <tr>\n      <th>0</th>\n      <td>0.80</td>\n      <td>0.60</td>\n    </tr>\n    <tr>\n      <th>1</th>\n      <td>0.78</td>\n      <td>0.56</td>\n    </tr>\n    <tr>\n      <th>2</th>\n      <td>0.75</td>\n      <td>0.50</td>\n    </tr>\n  </tbody>\n</table>
 
 But perhaps the difference that the means and medians make also points to why I may have thought that weekends are hotter than weekdays. When latter-summer weekends were warmer than weekdays then the weekends were *much* hotter than the weekday means which may have made the difference particularly salient. 
