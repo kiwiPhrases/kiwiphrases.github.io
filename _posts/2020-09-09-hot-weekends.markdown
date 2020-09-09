@@ -11,7 +11,7 @@ categories: research
 From BLM to the elections, this 2020 summer has been notable for a myriad of reasons but let me discuss one that most of you were probably the least worried about: weekend temps. 
 
 
-Throughout the entire summer, the time-constrained weekdays seemed comfortably heated for outdoor bike adventures but almost every weekend, the heat said "Nope!". You may think that this thought pattern perfectly aligns with confirmation bias and I would agree with you. After all, our planet is ambivalent to our arbitrary concept of weekdays so why would the weekends be any hotter than weekdays? Yet, here I am downloading weather data to check if weekends were indeed warmer than weekdays. 
+Throughout the entire summer, the time-constrained weekdays seemed comfortably heated for outdoor bike adventures but almost every weekend, the heat rose to unbearable levels. You may think that this thought pattern perfectly aligns with confirmation bias and I would agree with you. After all, our planet is ambivalent to our arbitrary concept of weekdays so why would the weekends be any hotter than weekdays? Yet, here I am downloading weather data to check if weekends were indeed warmer than weekdays. 
 
 # Analysis
 
