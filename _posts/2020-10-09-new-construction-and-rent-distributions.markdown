@@ -59,59 +59,59 @@ Two other things pop out. Regardless of variable transformations, construction o
   <tbody>
     <tr>
       <th>Bldg_Addition</th>
-      <td>-0.267***</td>
-      <td>0.238*</td>
-      <td>-0.183</td>
-      <td>0.092</td>
-      <td>2.766***</td>
+      <td>-0.168*</td>
+      <td>0.276**</td>
+      <td>-0.157</td>
+      <td>-0.322*</td>
+      <td>3.634***</td>
     </tr>
     <tr>
       <th>Bldg_Alter_Repair</th>
-      <td>0.053</td>
-      <td>-0.157*</td>
-      <td>0.068</td>
-      <td>0.465***</td>
-      <td>-0.354***</td>
+      <td>0.101</td>
+      <td>-0.132</td>
+      <td>0.067</td>
+      <td>0.343***</td>
+      <td>-0.258**</td>
     </tr>
     <tr>
-      <th>Bldg_Demolition</th>
-      <td>-0.004</td>
-      <td>0.092</td>
-      <td>0.38***</td>
-      <td>-0.219</td>
-      <td>-0.515***</td>
+      <th>np.log1p(np.abs(Bldg_Demolition))</th>
+      <td>1.207</td>
+      <td>-0.739</td>
+      <td>-4.974***</td>
+      <td>0.602</td>
+      <td>-3.983**</td>
     </tr>
     <tr>
-      <th>Bldg_New</th>
-      <td>0.004</td>
-      <td>-0.001</td>
-      <td>0.006</td>
-      <td>-0.049***</td>
-      <td>0.176***</td>
+      <th>np.log1p(Bldg_New)</th>
+      <td>-3.029***</td>
+      <td>-2.154**</td>
+      <td>0.109</td>
+      <td>2.787**</td>
+      <td>16.021***</td>
     </tr>
     <tr>
       <th>r_squared</th>
-      <td>0</td>
-      <td>0</td>
+      <td>0.02</td>
       <td>0.01</td>
-      <td>0.03</td>
-      <td>0.4</td>
+      <td>0.01</td>
+      <td>0.01</td>
+      <td>0.29</td>
     </tr>
     <tr>
       <th>adjusted_r</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0.03</td>
-      <td>0.4</td>
+      <td>0.02</td>
+      <td>0.01</td>
+      <td>0.01</td>
+      <td>0.01</td>
+      <td>0.29</td>
     </tr>
     <tr>
       <th>f-stat</th>
-      <td>1.83</td>
-      <td>1.55</td>
-      <td>2.4</td>
-      <td>12.3</td>
-      <td>262.77</td>
+      <td>6.92</td>
+      <td>3.71</td>
+      <td>4.22</td>
+      <td>4.76</td>
+      <td>156.25</td>
     </tr>
     <tr>
       <th>n_obs</th>
