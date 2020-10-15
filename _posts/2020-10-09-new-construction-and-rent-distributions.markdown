@@ -6,7 +6,7 @@ categories: research
 ---
 
 
-<img style="float: left;" src="./images/building_in_la.jpg" alt="building_map" width="300">
+<img style="float: left;" src="./images/building_in_la.png" alt="building_map" width="300">
 
 # Introduction
 
