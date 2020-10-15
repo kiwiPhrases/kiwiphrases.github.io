@@ -5,9 +5,8 @@ date:   2020-10-14 5:55:00 -0700
 categories: research
 ---
 
-![building_map](./images/building_in_la.png)
 
-<img style="float: left;" src=".images/building_in_la.jpg" alt="building_map" width="300">
+<img style="float: left;" src="./images/building_in_la.jpg" alt="building_map" width="300">
 
 # Introduction
 
