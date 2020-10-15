@@ -7,6 +7,7 @@ categories: research
 
 
 <img style="float: left;" src="/images/building_in_la.png" alt="building_map" width="300">
+![map](/images/building_in_la.png)
 
 # Introduction
 
