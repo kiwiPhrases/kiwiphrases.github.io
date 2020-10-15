@@ -6,7 +6,7 @@ categories: research
 ---
 
 
-<img style="float: left;" src="./images/building_in_la.png" alt="building_map" width="300">
+<img style="float: left;" src="/images/building_in_la.png" alt="building_map" width="300">
 
 # Introduction
 
@@ -14,7 +14,7 @@ Not too long ago, I stayed up passed midnight on a planning commission hearing f
 
 In brief, it's complicated. Results rather robustly indicate that construction of new units adds to the stock of units renting for $1500+ per month which is not surprising given that's what developers tend to build. There is some evidence that construction of new units also leads to some, albeit limited, loss of affordable units. 
 
-# Approach and results
+# Approach 
 
 I use American Community Survey(ACS) Block Group-level data on the number of units at various rent tiers and regress it against the number of units that were added according to LA City's building permit data. 
 
@@ -23,12 +23,13 @@ Since ACS data come in 5-year periods, I compare unit changes between ACS survey
 
 Before I describe the results, I should mention that I transformed some of the building permit data variables to reel in some of the tails. I could transform number of units lost to building demolitions and number of units in new buildings because values don't change signs. Building additions and alterations take on both positive and negative values making it more difficult to normalize those values without recourse to standardization.  I mention this because transformations heavily impact estimates. I include the untransformed results at the [bottom](#untransformed-variables).
 
+# Results
 
 The results in the table below suggest that construction of new units is related to the loss of units renting between $600-$1,000 per month. For a sense of magnitude, the estimates imply that 3 newly built units would lead to a loss of 3 $600-$799 units and a loss of 2 units in the $800-$1,000 range. 100 new units would lead to a loss of about 14 and 10 units respectively. 
 
 Results also suggest that the construction of new units leads to more units renting for $1,500+. Of course, this result is not surprising given that developers in LA City tend to build units catering to middle and high-income households (at least until JJJ passed but that's another topic). 
 
-Two other things pop out. Regardless of variable transformations, construction of new units, demolition and other activities, explains up to about 2% of variation in $600-$1,000 unit changes but up to 40% of the $2,0000 or More unit changes. This suggests that even if construction of new units does cause a decrease in more affordable units, it is but a very small factor. 
+Two other things pop out. Regardless of variable transformations, construction of new units, demolition and other activities, explains up to about 2% of variation in $600-$1,000 unit changes but up to 40% of the $2,0000+ unit changes. This suggests that even if construction of new units does cause a decrease in more affordable units, it is but a very small factor. 
 
 <div>
 <style scoped>
@@ -156,9 +157,9 @@ Rent control is another issue. Even if local amenity-improvements would lead to 
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>static_index</th>
-      <th>dynamic_index</th>
       <th>Rent600to799</th>
+      <th>Rent800to999</th>
+      <th>Rent1000to1249</th>
       <th>Rent1500to1999</th>
       <th>Rent2000orMore</th>
     </tr>
@@ -166,59 +167,59 @@ Rent control is another issue. Even if local amenity-improvements would lead to 
   <tbody>
     <tr>
       <th>Bldg_Addition</th>
-      <td>0.01</td>
-      <td>0.013</td>
-      <td>-0.005</td>
-      <td>0.005</td>
-      <td>-0.002</td>
+      <td>-2.907**</td>
+      <td>-0.778</td>
+      <td>0.657</td>
+      <td>4.571</td>
+      <td>-3.987</td>
     </tr>
     <tr>
       <th>Bldg_Alter_Repair</th>
-      <td>0.004</td>
-      <td>0.003</td>
-      <td>-0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>-0.571</td>
+      <td>-1.075</td>
+      <td>1.114</td>
+      <td>-1.314</td>
+      <td>-0.232</td>
     </tr>
     <tr>
-      <th>Bldg_Demolition</th>
-      <td>0.001</td>
-      <td>-0.003</td>
-      <td>-0.0</td>
-      <td>0.002*</td>
-      <td>-0.002**</td>
+      <th>np.log1p(np.abs(Bldg_Demolition))</th>
+      <td>0.247</td>
+      <td>3.025***</td>
+      <td>-0.647</td>
+      <td>-1.58</td>
+      <td>-0.564</td>
     </tr>
     <tr>
       <th>np.log1p(Bldg_New)</th>
-      <td>0.009*</td>
-      <td>0.007</td>
-      <td>-0.002</td>
-      <td>-0.001</td>
-      <td>0.005*</td>
+      <td>-0.949**</td>
+      <td>-2.358***</td>
+      <td>-1.849*</td>
+      <td>-1.584</td>
+      <td>9.499***</td>
     </tr>
     <tr>
       <th>r_squared</th>
-      <td>0.01</td>
-      <td>0.01</td>
-      <td>0</td>
-      <td>0.01</td>
       <td>0.02</td>
+      <td>0.02</td>
+      <td>0.01</td>
+      <td>0.01</td>
+      <td>0.06</td>
     </tr>
     <tr>
       <th>f-stat</th>
-      <td>1.07</td>
-      <td>1.29</td>
-      <td>0.51</td>
-      <td>0.98</td>
-      <td>3.08</td>
+      <td>2.81</td>
+      <td>3.9</td>
+      <td>1.59</td>
+      <td>1.58</td>
+      <td>11.04</td>
     </tr>
     <tr>
       <th>n_obs</th>
-      <td>602</td>
-      <td>589</td>
-      <td>602</td>
-      <td>602</td>
-      <td>602</td>
+      <td>731</td>
+      <td>731</td>
+      <td>731</td>
+      <td>731</td>
+      <td>731</td>
     </tr>
   </tbody>
 </table>
