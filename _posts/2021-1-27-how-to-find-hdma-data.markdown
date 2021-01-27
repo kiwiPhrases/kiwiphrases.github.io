@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to find FDIC Deposit (SDI) Data?"
+title:  "How to find FDIC Deposit Data?"
 date:   2020-10-21 5:55:00 -0700
 categories: research
 ---
@@ -10,9 +10,9 @@ I hope to save you many hours of senseless toil with this brief post on where
 to download FDIC's bank [Deposit Market Share data](https://www7.fdic.gov/sod/sodMarketBank.asp?barItem=2). These public data show the total dollar amount deposited at each bank within U.S. metropolitan areas.
 
 # Things that work
-If you want to download a zipped version of CSV data (I am not aware of any other options), then you have to use a modified link below. The exact link below will download 2017 data but if you want 2015 or 2018 or any other available year then simply change the 2017 in the link below to the desired year.
+If you want to download a bulk zipped version of CSV data (I am not aware of any other options) for every metropolitan area in the U.S. for a particular year, then you have to use the (modified) link below. The exact link will download 2017 data but if you want 2015 or any other available year then simply change the 2017 in the link below to the desired year.
 
-<p align="center">**http://www5.fdic.gov/sod/ShowFileWithStats1.asp?strFileName=all_2017.zip**</p>
+<p align="center">http://www5.fdic.gov/sod/ShowFileWithStats1.asp?strFileName=all_2017.zip</p>
 
 As a side note, if the link doesn't seem to work, make sure you set the browser to allow downloads from this domain.
 
