@@ -17,18 +17,18 @@ The app is designed to quickly and quietly record the caregiver who put the munc
 
 Below is the outline of the flow from registration to daily usage.
 
-### Register the munchkin
+1.  Register the munchkin
 
 When reigstering, you'll be asked to supply a name for the munchkin, we obviously prefer unique nicknames, and an e-mail. 
 
 <p align="center"><img src="/fruzzmunchkinreg.png" alt="frontpage" align="center" width="600"/></p>
 
-### Log In
+2.  Log In
 
 Once registered, you can login. The app will automically detect that there are no registered parents yet and lead you to the parental registration page.
-<p align="center"><img src="/fruzzzlogin.png" alt="frontpage" align="center" width="600"/></p>
+<p align="center"><img src="/fruzzlogin.png" alt="frontpage" align="center" width="600"/></p>
 
-### Register the parentals
+3.  Register the parentals
 
 Here, we add the names of the caregivers who put the registered munchkin to bed. Dad, mom, multiple dads, multiple moms, or nannies or uncles, it really doesn't matter. Just limit yourself to 5 entries. 
 
@@ -36,20 +36,20 @@ Here, we add the names of the caregivers who put the registered munchkin to bed.
 
 Once this step is completed, recording is the only thing left to do.
 
-### Record Away
+4.  Record Away
 
 Select the caregiver who put the munchkin to bed then confirm the date and time on the subsequent page.
 
 <p align="center"><img src="/parentrecord.png" alt="frontpage" align="center" width="600"/></p>
 
 
-### Dashboard
+5.  Dashboard
 
 The dashboard shows 3 graphs: 
 
-1) the average time each caregiver puts the munchkin to sleep,
-2) the share of lulling that each caregiver is responsible for
-3) a graph of sleep times across the days
+    1) the average time each caregiver puts the munchkin to sleep,
+    2) the share of lulling that each caregiver is responsible for
+    3) a graph of sleep times across the days
 
 <p align="center"><img src="/dashboard.png" alt="frontpage" align="center" width="600"/></p>
 

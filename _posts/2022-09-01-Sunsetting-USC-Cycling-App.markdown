@@ -16,16 +16,16 @@ The app had a simple goal of enabling the team's leadership to easily manage inv
 
 For posterity and reminiscence, here are some pics of the website. 
 
-## the front page
+#### The front page
 <p align="center"><img src="/frontpage.png" alt="frontpage" align="center" width="600"/></p>
 
-## the store
+#### The store
 <p align="center"><img src="/thestore.png" alt="store" align="center" width="600"/></p>
 
-## the product
+#### The product
 <p align="center"><img src="/theproduct.png" alt="productpage" align="center" width="600"/></p>
 
-## the cart
+#### The cart
 <p align="center"><img src="/thecart.png" alt="cartpage" align="center" width="600"/></p>
 
 
