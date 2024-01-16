@@ -39,11 +39,11 @@ Ultimately, despite being a functional inventory management system, I never quit
 
 Perhaps the key takeaway is that I really enjoyed building the app. It tapped into my desire to create things that make our lives easier and, hopefully, better. I also love learning new skills and boy did form processing befuddle me at the time. The remaining bits below are a slew of thoughts. 
 
-## Django and my choice of tools
+#### Django and my choice of tools
 
 Would I use Django again? Absolutely. Before and since building the cycling app, I've used a number of different app-constructing methods ranging from the quick and easy R-Shiny to Dash, Flask, Streamlit, Esri (not by choice), effin Excel (not by choice), Tableau (not by choice), and Power BI (you guessed it, also not by choice). The range of tasks in their use varied greatly but with the exception of Flask, none have quite the depth to build multi-page interactive apps. Most are only great for quick dashboards and visualizations with various degrees of interaction. Flask almost parallels Django's abilities yet Django's native database interface and master-level db-management along with straight-forward support for user management makes it my go-to for app development. Django also seems to be slightly less tedious to deploy to Flask. 
 
-## Things I should have done differently
+#### Things I should have done differently
 
 There were a few things in the sc-cycling's app development that, in retrospect, I sort of cringe at. Perhaps the biggest element is the semi-exposed db URI. Why semi-exposed? Heroku allowed github-based deployment so I could simply push updates straight from git to Heroku. This was rather convenient, especially since Heroku's projects were private so db credentials were not blatantly exposed. However, I clearly should have made use of environmental variables to begin with. This was a newbie's mistake. 
 
