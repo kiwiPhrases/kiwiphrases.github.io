@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Is housing inadequacy racist?"
+title:  "Do minority households reside in worse quality units?"
 date:   2019-07-24 5:55:00 -0700
 categories: research
 ---
