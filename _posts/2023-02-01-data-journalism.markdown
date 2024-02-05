@@ -5,7 +5,7 @@ date:   2023-02-01 5:55:00 -0700
 categories: research
 ---
 
-![HPA graphs](/HPAgraph.jpg)
+![HPA graphs](/images/HPAgraph.jpg)
 
 # The Appetizer
 
